@@ -1,0 +1,139 @@
+* {
+  font-family: "BigBlueTermPlus Nerd Font", "Symbols Nerd Font", sans-serif, monospace;
+  font-size: 13px;
+  color: #d0d0d0;
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+window#waybar {
+  /*background-color: rgba(20, 20, 30, 0.85);*/
+  background-color: transparent;
+  /*border-bottom: 1px solid rgba(255, 255, 255, 0.1);*/
+  transition: background-color 0.3s ease;
+}
+
+#workspaces button {
+  padding: 0 10px;
+  margin: 3px 3px;
+  border-radius: 6px;
+  background-color: transparent;
+  color: #888;
+}
+
+#workspaces button.active {
+  background-color: #4c566a;
+  color: #ffffff;
+}
+
+#workspaces button:hover {
+  background-color: #5e81ac;
+  color: #ffffff;
+}
+
+#clock,
+#cpu,
+#memory,
+#battery,
+#temperature,
+#pulseaudio,
+#network,
+#custom-power,
+#custom-gpu,
+#language,
+#custom-swap {
+  padding: 0 10px;
+  margin: 0 5px;
+  color: #17241a;
+  border-radius: 6px;
+}
+
+#clock {
+  background-color: #c4514d;
+  /*border-radius: 6px;*/
+}
+
+#pulseaudio {
+  /*background-color: #845d96;*/
+  background-color: #d9c741;
+}
+
+#battery {
+  background-color: #a3be8c;
+}
+
+#battery button.hover {
+  background-color: rgba(75,173,96,1);
+}
+#language{
+  background-color: rgba(204,33,101,1);
+}
+
+#network {
+  background-color: #5d9691;
+}
+
+/* A star means everything inside. Window > * means everything inside waybar window (I think) */
+
+/* window > * {
+  font-family: "BigBlueTermPlus Nerd Font", "Symbols Nerd Font", sans-serif, monospace;
+  font-size: 12px;
+  background-color:#4a3f35;
+  padding:0px;
+  margin:0px;
+}
+
+#battery {
+	color: white;
+	background-color:#a9b9a5;
+	color:#3a4e5f;
+}
+
+#battery.full {
+	background-color: green;
+
+}
+
+#battery.warning {
+	background-color: orange;
+}
+
+
+#battery.critical {
+	background-color: red;
+}
+
+#battery.charging {
+	background-color: green;
+}
+
+#battery .icon {
+	margin-left:5px;
+	font-size:18px;
+}
+
+#language {
+	color: #3a4e5f;
+	background-color:#a9b9a5;
+}
+
+#clock {
+	color:#3a4e5f;
+	background-color:#a9b9a5;
+}
+
+#network {
+	color: #3a4e5f;
+	background-color:#a9b9a5;
+}
+
+#workspaces {
+	background-color:#2e4f3e;
+}
+font-family: "JetBrainsMono Nerd Font", monospace; */
+
+
+
+
