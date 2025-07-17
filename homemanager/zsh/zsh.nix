@@ -16,9 +16,6 @@
       gs = "git status";
       nixb = "sudo nixos-rebuild switch --flake #johnny-home --show-trace";
     };
-    sessionVariables = {
-      EDITOR = "nvim";
-    };
   };
 }
 
