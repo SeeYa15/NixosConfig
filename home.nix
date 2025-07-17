@@ -67,22 +67,22 @@
 
 #General programs. Enable.
   programs = {
-    bash = {
+    # bash = {
 
-      enable = true;
-      shellAliases = {
-        ls = "ls -lah --color";
-        gs = "git status";
-        nixb = "sudo nixos-rebuild switch --flake #johnny-home --show-trace";
-      };
-      sessionVariables = {
-        EDITOR = "nvim";
-      };
-      initExtra = ''
-      nv() { nvim -c "lcd $1" $1; }
-      neofetch
-      '';
-    };
+    #   enable = true;
+    #   shellAliases = {
+    #     ls = "ls -lah --color";
+    #     gs = "git status";
+    #     nixb = "sudo nixos-rebuild switch --flake #johnny-home --show-trace";
+    #   };
+    #   sessionVariables = {
+    #     EDITOR = "nvim";
+    #   };
+    #   initExtra = ''
+    #   nv() { nvim -c "lcd $1" $1; }
+    #   neofetch
+    #   '';
+    # };
     ranger.enable = true;
     fzf= {
       enable = true;

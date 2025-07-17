@@ -35,6 +35,7 @@
 			modules = [
 
 			./configuration.nix
+      ./homemanager/zsh/zsh.nix #Used here to be set at system level and not user level
 				home-manager.nixosModules.home-manager
 				{
 					home-manager.useGlobalPkgs = true;

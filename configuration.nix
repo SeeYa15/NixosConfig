@@ -60,7 +60,7 @@
     isNormalUser = true;
     description = "Johnny Svensson";
     extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.bash;
+    shell = pkgs.zsh;
     packages = with pkgs; [];
   };
 
@@ -115,6 +115,7 @@
     vim
     wget
     w3m
+    zsh
     slack
     firefox
     greetd.tuigreet #Login
