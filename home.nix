@@ -65,6 +65,11 @@
     userName = "Johnny Svensson";
   };
 
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+  };
+
 #General programs. Enable.
   programs = {
     # bash = {

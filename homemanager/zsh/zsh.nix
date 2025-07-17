@@ -5,6 +5,10 @@
     enableCompletion = true;
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
+
+    history = {
+      size = 1000;
+    };
     ohMyZsh = {
       enable = true;
       theme = "powerlevel10k/powerlevel10k";
