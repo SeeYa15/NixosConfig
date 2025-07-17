@@ -116,8 +116,7 @@
   environment.systemPackages = with pkgs; [
     vim
     wget
-    w3m
-    zsh
+    w3m 
     slack
     firefox
     greetd.tuigreet #Login
