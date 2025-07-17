@@ -70,6 +70,8 @@
       package = inputs.hyprland.packages.${pkgs.system}.hyprland;
   };
 
+  programs.zsh.enable = true;
+
   services = {
     xserver.xkb = {
       layout = "se, us";
@@ -83,7 +85,7 @@
     logind = {
       lidSwitch = "hibernate";
       lidSwitchExternalPower = "ignore";
-    };
+    };:
     greetd = {
       enable = true;
       settings = {
