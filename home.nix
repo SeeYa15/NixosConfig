@@ -55,6 +55,7 @@
       ./homemanager/spicetify/spicetify.nix
     #      ./homemanager/spotify/spotify.nix
       ./homemanager/wofi/wofi.nix
+      ./homemanager/zsh/zsh.nix
 #  ./homemanager/fuzzel/fuzzel.nix
   ];
   home.stateVersion = "24.11";
