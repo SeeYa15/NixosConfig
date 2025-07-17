@@ -85,7 +85,7 @@
     logind = {
       lidSwitch = "hibernate";
       lidSwitchExternalPower = "ignore";
-    };:
+    };
     greetd = {
       enable = true;
       settings = {
