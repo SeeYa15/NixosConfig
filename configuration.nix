@@ -28,10 +28,11 @@
   networking.networkmanager.enable = true;
   # Nix options
   nix = {
-	settings = {
-	    auto-optimise-store = true;
-	    experimental-features = ["nix-command" "flakes"];
-	};
+    settings = {
+      auto-optimise-store = true;
+      experimental-features = ["nix-command" "flakes"];
+      max-jobs = 3;
+    };
   };
   # Set your time zone.
   time.timeZone = "Europe/Stockholm";
