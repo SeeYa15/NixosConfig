@@ -131,32 +131,32 @@
         };
       };
 
-      none-ls = {
-        enable = true;
+      #   none-ls = {
+      #     enable = true;
 
-        sources = {
-          completion = {
-            luasnip.enable = true;
-            nvim_snippets.enable = true;
-            spell.enable = true;
-            tags.enable = true;
-          };
-          diagnostics = {
-            cppcheck.enable = true; #C++
-            dotenv_linter.enable = true; #DotNet .env-files
-            tidy.enable = true; #HTML
-            pylint.enable = true;
-            deadnix.enable = true;
-          };
-          formatting = {
-            csharpier.enable = true;
-            clang_format.enable = true;
-            stylua.enable = true;
-            prettier.enable = true;
-            htmlbeautifier.enable = true;
-          };
-        };
-      };
+      #     sources = {
+      #       completion = {
+      #         luasnip.enable = true;
+      #         nvim_snippets.enable = true;
+      #         spell.enable = true;
+      #         tags.enable = true;
+      #       };
+      #       diagnostics = {
+      #         cppcheck.enable = true; #C++
+      #         dotenv_linter.enable = true; #DotNet .env-files
+      #         tidy.enable = true; #HTML
+      #         pylint.enable = true;
+      #         deadnix.enable = true;
+      #       };
+      #       formatting = {
+      #         csharpier.enable = true;
+      #         clang_format.enable = true;
+      #         stylua.enable = true;
+      #         prettier.enable = true;
+      #         htmlbeautifier.enable = true;
+      #       };
+      #     };
+      #   };
 
       treesitter = {
         enable = true;
