@@ -1,5 +1,6 @@
 {inputs, lib, pkgs, config, ...} : {
 
+  
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -17,5 +18,9 @@
       nixb = "sudo nixos-rebuild switch --flake #johnny-home --show-trace";
     };
   };
+
+  home.packages = with pkgs; [
+    zsh-powerlevel10k
+  ];
 }
 
