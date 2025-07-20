@@ -1,5 +1,5 @@
 {inputs, lib, pkgs, config, ...} : {
-#NIXVIM
+  #NIXVIM
 
   home.packages = with pkgs; [
     csharp-ls
@@ -18,11 +18,11 @@
     colorschemes.everforest = {
       enable = true;
     };
-# #SET GLOBAL MAPLEADER
+    # #SET GLOBAL MAPLEADER
     globals = {
       mapleader = " "; #Space
     };
-#NEOVIM OPTIONS
+    #NEOVIM OPTIONS
     opts = {
       number = true;
       relativenumber = true;
@@ -35,7 +35,7 @@
       clipboard = "unnamedplus";
     };
 
-#PLUGINS#
+    #PLUGINS#
     plugins = {
 
       lsp = {
@@ -48,9 +48,10 @@
           omnisharp.enable = true;
           html.enable = true;
           pyright.enable = true;
-       };
+        };
         keymaps.lspBuf = {
           K = "hover";
+          "<C-k>" = "diagnostics";
           gD = "references";
           gd = "definition";
           gi = "implementation";   
@@ -66,9 +67,10 @@
         settings = {
 
           sources = [
-          { name = "nvim_lsp"; }
-          { name = "path"; }
-          { name = "buffer"; }
+            { name = "nvim_lsp"; }
+            { name = "luasnip";}
+            { name = "path"; }
+            { name = "buffer"; }
           ];
 
           mapping = {
@@ -80,6 +82,10 @@
         };
 
       };
+      # Enable the integrations
+      cmp-nvim-lsp.enable = true;      # Connects cmp to LSP
+      cmp_luasnip.enable = true;       # Connects cmp to snippets
+      luasnip.enable = true;           # Snippet engine
 
       friendly-snippets = {
         enable = true;
@@ -131,32 +137,32 @@
         };
       };
 
-         none-ls = {
-           enable = true;
+      none-ls = {
+        enable = true;
 
-           sources = {
-             completion = {
-               luasnip.enable = true;
-               nvim_snippets.enable = true;
-               spell.enable = true;
-               tags.enable = true;
-             };
-             diagnostics = {
-               cppcheck.enable = true; #C++
-               dotenv_linter.enable = true; #DotNet .env-files
-               tidy.enable = true; #HTML
-               pylint.enable = true;
-               deadnix.enable = true;
-             };
-             formatting = {
-               csharpier.enable = true;
-               clang_format.enable = true;
-               stylua.enable = true;
-               prettier.enable = true;
-               htmlbeautifier.enable = true;
-             };
-           };
-         };
+        sources = {
+          completion = {
+            luasnip.enable = true;
+            nvim_snippets.enable = true;
+            spell.enable = true;
+            tags.enable = true;
+          };
+          diagnostics = {
+            cppcheck.enable = true; #C++
+            dotenv_linter.enable = true; #DotNet .env-files
+            tidy.enable = true; #HTML
+            pylint.enable = true;
+            deadnix.enable = true;
+          };
+          formatting = {
+            csharpier.enable = true;
+            clang_format.enable = true;
+            stylua.enable = true;
+            prettier.enable = true;
+            htmlbeautifier.enable = true;
+          };
+        };
+      };
 
       treesitter = {
         enable = true;
