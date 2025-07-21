@@ -51,7 +51,6 @@
         };
         keymaps.lspBuf = {
           K = "hover";
-          "<C-k>" = "diagnostics";
           gD = "references";
           gd = "definition";
           gi = "implementation";   
