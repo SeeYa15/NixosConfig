@@ -48,7 +48,7 @@
       bind = [
 
         #"$mod, SUPER_L, exec, pkill fuzzel || fuzzel"
-          "$mod, SUPER_L, exec, pkill wofi || wofi"
+          "$mod, SUPER_L, exec, pkill wofi || wofi --show drun"
           "$mod, Q, exec, kitty"
           "$mod, C, killactive"
           "$mod, E, exec, lf"
