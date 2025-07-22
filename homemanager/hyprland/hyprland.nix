@@ -47,10 +47,11 @@
 
       bind = [
 
-        "$mod, SUPER_L, exec, pkill fuzzel || fuzzel"
+        #"$mod, SUPER_L, exec, pkill fuzzel || fuzzel"
+          "$mod, SUPER_L, exec, pkill wofi || wofi"
           "$mod, Q, exec, kitty"
           "$mod, C, killactive"
-          "$mod, E, exec, yazi"
+          "$mod, E, exec, lf"
 
 
 

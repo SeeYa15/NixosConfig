@@ -53,10 +53,8 @@
       ./homemanager/tmux/tmux.nix
       ./homemanager/neovim/nixvim.nix
       ./homemanager/spicetify/spicetify.nix
-    #      ./homemanager/spotify/spotify.nix
       ./homemanager/wofi/wofi.nix
       ./homemanager/zsh/zsh.nix
-#  ./homemanager/fuzzel/fuzzel.nix
   ];
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
@@ -73,22 +71,6 @@
 
 #General programs. Enable.
   programs = {
-    # bash = {
-
-    #   enable = true;
-    #   shellAliases = {
-    #     ls = "ls -lah --color";
-    #     gs = "git status";
-    #     nixb = "sudo nixos-rebuild switch --flake #johnny-home --show-trace";
-    #   };
-    #   sessionVariables = {
-    #     EDITOR = "nvim";
-    #   };
-    #   initExtra = ''
-    #   nv() { nvim -c "lcd $1" $1; }
-    #   neofetch
-    #   '';
-    # };
     ranger.enable = true;
     fzf= {
       enable = true;
