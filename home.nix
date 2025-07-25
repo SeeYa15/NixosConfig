@@ -18,7 +18,6 @@
       file
       which
       tree
-      btop
       kitty
       fuzzel
       playerctl
@@ -55,6 +54,7 @@
       ./homemanager/spicetify/spicetify.nix
       ./homemanager/wofi/wofi.nix
       ./homemanager/zsh/zsh.nix
+      ./homemanager/btop/btop.nix
   ];
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;

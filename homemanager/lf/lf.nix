@@ -27,4 +27,14 @@ in {
       set cleaner ${cleanerScript}
     '';
   };
+
+# Desktop entry for wofi
+  xdg.desktopEntries.lf = {
+    name = "lf";
+    comment = "Terminal file manager";
+    exec = "kitty -e lf"; # Using kitty since you're already using it for previews
+    icon = "folder";
+    terminal = false;
+    categories = [ "System" "FileManager" ];
+  };
 }
