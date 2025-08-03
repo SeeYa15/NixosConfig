@@ -10,7 +10,7 @@
     comment = "Resource monitor";
     exec = "kitty -e btop"; 
     icon = "htop";
-    terminal = false;
+    terminal = true;
     categories = [ "System" "Monitor" ];
   };
 }
