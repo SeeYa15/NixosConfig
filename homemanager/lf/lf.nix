@@ -1,3 +1,45 @@
+#{ pkgs, lib, config, ... }: let 
+#    previewerScript = pkgs.writeShellScript "kitty-preview" ''
+#      file=$1
+#      w=$2
+#      h=$3
+#      x=$4
+#      y=$5
+#
+#      if [[ "$( file -Lb --mime-type "$file")" =~ ^image ]]; then
+#          kitty +kitten icat --silent --stdin no --transfer-mode file --place "''${w}x''${h}@''${x}x''${y}" "$file" < /dev/null > /dev/tty
+#          exit 1
+#      fi
+#
+#      cat "$file"
+#    '';
+#
+#    cleanerScript = pkgs.writeShellScript "kitty-clean" ''
+#      kitty +kitten icat --clear --stdin no --silent --transfer-mode file < /dev/null > /dev/tty
+#    '';
+#in {
+#  programs.lf = {
+#    enable = true;
+#    
+#    previewer.source = previewerScript;
+#
+#    extraConfig = ''
+#      set cleaner ${cleanerScript}
+#    '';
+#  };
+#
+## Desktop entry for wofi
+#  xdg.desktopEntries.lf = {
+#    name = "lf";
+#    comment = "Terminal file manager";
+#    exec = "kitty -e lf"; # Using kitty since you're already using it for previews
+#    icon = "folder";
+#    terminal = true;
+#    categories = [ "System" "FileManager" ];
+#  };
+#}
+
+
 { pkgs, lib, config, ... }: let 
     previewerScript = pkgs.writeShellScript "kitty-preview" ''
       file=$1
@@ -5,15 +47,12 @@
       h=$3
       x=$4
       y=$5
-
       if [[ "$( file -Lb --mime-type "$file")" =~ ^image ]]; then
           kitty +kitten icat --silent --stdin no --transfer-mode file --place "''${w}x''${h}@''${x}x''${y}" "$file" < /dev/null > /dev/tty
           exit 1
       fi
-
       cat "$file"
     '';
-
     cleanerScript = pkgs.writeShellScript "kitty-clean" ''
       kitty +kitten icat --clear --stdin no --silent --transfer-mode file < /dev/null > /dev/tty
     '';
@@ -22,19 +61,19 @@ in {
     enable = true;
     
     previewer.source = previewerScript;
-
     extraConfig = ''
       set cleaner ${cleanerScript}
     '';
   };
 
-# Desktop entry for wofi
+  # Desktop entry for wofi
   xdg.desktopEntries.lf = {
-    name = "lf";
+    name = "LF File Manager";  # More descriptive name
     comment = "Terminal file manager";
-    exec = "kitty -e lf"; # Using kitty since you're already using it for previews
+    exec = "kitty -e lf";
     icon = "folder";
-    terminal = true;
-    categories = [ "System" "FileManager" ];
+    terminal = false;  # Fixed this
+    categories = [ "System" "FileManager" "FileTools" ];
+    mimeType = [ "inode/directory" ];  # Optional: associate with directories
   };
 }
