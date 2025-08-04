@@ -72,7 +72,7 @@ in {
     comment = "Terminal file manager";
     exec = "kitty -e lf";
     icon = "folder";
-    terminal = false;  # Fixed this
+    terminal = false; 
     categories = [ "System" "FileManager" "FileTools" ];
     mimeType = [ "inode/directory" ];  # Optional: associate with directories
   };
