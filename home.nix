@@ -69,6 +69,7 @@
     VISUAL = "nvim";
   };
 
+  xdg.enable = true;
 #General programs. Enable.
   programs = {
     ranger.enable = true;
