@@ -69,6 +69,7 @@
     VISUAL = "nvim";
   };
 
+  targets.genericLinux.enable = true;
   xdg.enable = true;
 #General programs. Enable.
   programs = {
