@@ -6,7 +6,6 @@
 
   home.packages = with pkgs; [
     neofetch
-      nnn
       zip
       unzip
       ripgrep
@@ -20,8 +19,10 @@
       tree
       kitty
       fuzzel
-      playerctl
-      brightnessctl
+      #System controllers / CTL
+      playerctl #Handling music, media player
+      brightnessctl #Handling Screen
+    
       wireplumber
       wl-clipboard
       blueman
@@ -30,7 +31,6 @@
       pulseaudio
       python3Full
       desktop-file-utils
-      ranger
       feh
       gparted
       nix-output-monitor
@@ -55,6 +55,7 @@
       ./homemanager/wofi/wofi.nix
       ./homemanager/zsh/zsh.nix
       ./homemanager/btop/btop.nix
+      ./homemanager/fuzzel.nix
   ];
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
@@ -73,33 +74,12 @@
   xdg.enable = true;
 #General programs. Enable.
   programs = {
-    ranger.enable = true;
     fzf= {
       enable = true;
       enableBashIntegration = true;
     };
     yazi.enable = true;
   };
-
-#FUZZEL
-  programs.fuzzel = {
-    enable = true;
-
-    settings = {
-      main = {
-        layer = "overlay";
-        terminal = "kitty";
-        font = "Noto Sans:size=18";
-        prompt = "\"   \"";
-        dpi-aware = "no";
-        horizontal-pad = 35;
-        vertical-pad = 20;
-        inner-pad = 15;
-        width = 20;
-      };
-    };
-  };
-
 
   fonts.fontconfig.enable = true;
   programs.kitty = {

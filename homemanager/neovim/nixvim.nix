@@ -35,6 +35,7 @@
       clipboard = "unnamedplus";
     };
 
+
     #PLUGINS#
     plugins = {
 
