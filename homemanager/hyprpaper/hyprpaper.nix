@@ -7,13 +7,13 @@
       preload = [
         #"${config.home.homeDirectory}/share/wallpapers/wallpaperhaven.jpg"
         
-        "${config.home.homeDirectory}/Downloads/forest-theme.jpg"
+        "${config.home.homeDirectory}/Downloads/tree.jpg"
       ];
 
       wallpaper = [
         #",${config.home.homeDirectory}/share/wallpapers/wallpaperhaven.jpg"
 
-        "${config.home.homeDirectory}/Downloads/forest-theme.jpg"
+        ",${config.home.homeDirectory}/Downloads/tree.jpg"
       ];
     };
   };
