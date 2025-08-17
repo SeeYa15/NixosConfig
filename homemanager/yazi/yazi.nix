@@ -8,7 +8,7 @@
   xdg.desktopEntries.yazi = {
     name = "Yazi Terminal File Manager";  # More descriptive name
     comment = "Terminal file manager";
-    exec = "yazi -e lf";
+    exec = "exec -e yazi";
     icon = "yazi";
     terminal = false; 
     categories = [ "System" "FileManager" "FileTools" ];

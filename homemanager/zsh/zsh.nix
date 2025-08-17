@@ -17,8 +17,9 @@
       ls = "ls -lah --color";
       gs = "git status";
       nixb = "sudo nixos-rebuild switch --flake #johnny-home --show-trace";
-      nixpush="git add . && git commit -am 'update: $(date + '%Y-%m-%d %H:%M')' && git push";
-
+     nixpush = ''
+        git add . && git commit -am "update: $(date '+%Y-%m-%d %H:%M')" && git push
+      '';    
     };
   };
 }
