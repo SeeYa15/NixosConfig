@@ -1,21 +1,17 @@
 
 {inputs, lib, pkgs, config, ...} : {
 
-  home.packages = with pkgs; [
-    yazi
-  ];
   programs.yazi = {
-
     enable = true;
+  };
 
-    xdg.desktopEntries.yazi = {
-      name = "Yazi Terminal File Manager";  # More descriptive name
-      comment = "Terminal file manager";
-      exec = "yazi -e lf";
-      icon = "yazi";
-      terminal = false; 
-      categories = [ "System" "FileManager" "FileTools" ];
-      mimeType = [ "inode/directory" ];  # Optional: associate with directories
-    };
+  xdg.desktopEntries.yazi = {
+    name = "Yazi Terminal File Manager";  # More descriptive name
+    comment = "Terminal file manager";
+    exec = "yazi -e lf";
+    icon = "yazi";
+    terminal = false; 
+    categories = [ "System" "FileManager" "FileTools" ];
+    mimeType = [ "inode/directory" ];  # Optional: associate with directories
   };
 }
