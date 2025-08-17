@@ -3,7 +3,7 @@
   programs.yazi = {
     enable = true;
 
-    xdg.desktopEntries.lf = {
+    xdg.desktopEntries.yazi = {
       name = "Yazi Terminal File Manager";  # More descriptive name
       comment = "Terminal file manager";
       exec = "yazi -e lf";
