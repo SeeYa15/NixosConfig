@@ -1,6 +1,11 @@
 
 {inputs, lib, pkgs, config, ...} : {
+
+  home.packages = with pkgs; [
+    yazi
+  ];
   programs.yazi = {
+
     enable = true;
 
     xdg.desktopEntries.yazi = {
