@@ -55,7 +55,8 @@
       ./homemanager/wofi/wofi.nix
       ./homemanager/zsh/zsh.nix
       ./homemanager/btop/btop.nix
-      ./homemanager/fuzzel.nix
+      ./homemanager/fuzzel/fuzzel.nix
+      ./homemanager/yazi/yazi.nix
   ];
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
