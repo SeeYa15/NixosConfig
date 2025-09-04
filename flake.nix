@@ -11,7 +11,8 @@
 
 		nixvim = {
 		    url = "github:nix-community/nixvim";
-		   # inputs.nixpkgs.follows = "nixpkgs";
+        #When using packages from nixpkgs it caused error with plugins.
+		    #inputs.nixpkgs.follows = "nixpkgs";
 		};
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";

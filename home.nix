@@ -10,35 +10,40 @@
       unzip
       ripgrep
       jq
+      
+      #Terminal Search Fuzzy Finder
       fzf
-      fd
-      mtr
-      iperf3
+      fd 
+
+      mtr #Terminal Network 
       file
       which
       tree
       kitty
-      fuzzel
+      #fuzzel #Used as a program starter. Wofi is being used atm
+
       #System controllers / CTL
       playerctl #Handling music, media player
-      brightnessctl #Handling Screen
-    
+      brightnessctl #Handling Screen 
       wireplumber
       wl-clipboard
       blueman
       networkmanagerapplet
       pavucontrol
       pulseaudio
-      python3Full
       desktop-file-utils
       feh
       gparted
       nix-output-monitor
       yazi
+
+      #DevelopPackages
+      python3Full
+
       #C++ packages
       gcc
       gdb
-      ];
+  ];
 
 
 
@@ -55,7 +60,7 @@
       ./homemanager/wofi/wofi.nix
       ./homemanager/zsh/zsh.nix
       ./homemanager/btop/btop.nix
-      ./homemanager/fuzzel/fuzzel.nix
+      #./homemanager/fuzzel/fuzzel.nix
       ./homemanager/yazi/yazi.nix
   ];
   home.stateVersion = "24.11";
@@ -73,7 +78,8 @@
 
   targets.genericLinux.enable = true;
   xdg.enable = true;
-#General programs. Enable.
+  
+  #General programs. Enable.
   programs = {
     fzf= {
       enable = true;
