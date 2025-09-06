@@ -31,10 +31,13 @@
       networkmanagerapplet
       pavucontrol
       pulseaudio
+
+      nwg-displays
+      nwg-menu
+
+
       desktop-file-utils
-      feh
-      gparted
-      nix-output-monitor
+      feh #Image viewer. Also used as a terminal. it can compile text and thumbnail listings, show (un)loadable files, set X11 backgrounds, and more.
       yazi
 
       #DevelopPackages

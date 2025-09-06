@@ -120,6 +120,7 @@
     w3m 
     slack
     firefox
+    brave
     greetd.tuigreet #Login
   ];
   fonts.packages = with pkgs; [

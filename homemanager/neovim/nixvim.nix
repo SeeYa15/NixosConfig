@@ -50,13 +50,18 @@
           html.enable = true;
           pyright.enable = true;
         };
-        keymaps.lspBuf = {
+        keymaps = {
+          diagnostic = {
+            "<leader>j" = "goto_next";
+          };
+          lspBuf = {
           K = "hover";
           gD = "references";
           gd = "definition";
           gi = "implementation";   
           gt = "type_definition";
           "<leader>k" = "code_action";
+        };
         };
       };
 
