@@ -67,6 +67,7 @@
   #Add so that I can find Silakka54 in Vial
   services.udev.extraRules = ''
     SUBSYSTEM=="usb", ATTR{idVendor}=="feed", ATTR{idProduct}=="0000", MODE="0666"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
   '';
 
   programs.hyprland = {
