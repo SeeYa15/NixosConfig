@@ -22,6 +22,8 @@
       kitty
       #fuzzel #Used as a program starter. Wofi is being used atm
 
+      vial #Keyboard configure
+
       #System controllers / CTL
       playerctl #Handling music, media player
       brightnessctl #Handling Screen 
