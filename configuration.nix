@@ -64,6 +64,10 @@
     shell = pkgs.zsh;
     packages = with pkgs; [];
   };
+  #Add so that I can find Silakka54 in Vial
+  services.udev.extraRules = ''
+    SUBSYSTEM=="usb", ATTR{idVendor}=="062a", ATTR{idProduct}=="9013", MODE="0666"
+  '';
 
   programs.hyprland = {
       enable = true;
