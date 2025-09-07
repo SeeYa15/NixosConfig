@@ -121,6 +121,7 @@
     slack
     firefox
     brave
+    chromium
     greetd.tuigreet #Login
   ];
   fonts.packages = with pkgs; [
