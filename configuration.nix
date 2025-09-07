@@ -60,7 +60,7 @@
   users.users.johnnys = {
     isNormalUser = true;
     description = "Johnny Svensson";
-    extraGroups = [ "networkmanager" "wheel" "dialout" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "tty" ];
     shell = pkgs.zsh;
     packages = with pkgs; [];
   };
