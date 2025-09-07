@@ -31,7 +31,7 @@
       networkmanagerapplet
       pavucontrol
       pulseaudio
-
+      acpi #For checking battery, LID on laptop
       nwg-displays
       nwg-menu
 
