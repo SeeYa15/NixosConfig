@@ -127,6 +127,7 @@
     brave
     chromium
     greetd.tuigreet #Login
+    lsusb
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.bigblue-terminal
