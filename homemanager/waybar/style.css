@@ -52,11 +52,9 @@ window#waybar {
 
 #clock {
   background-color: #c4514d;
-  /*border-radius: 6px;*/
 }
 
 #pulseaudio {
-  /*background-color: #845d96;*/
   background-color: #d9c741;
 }
 
@@ -74,66 +72,3 @@ window#waybar {
 #network {
   background-color: #5d9691;
 }
-
-/* A star means everything inside. Window > * means everything inside waybar window (I think) */
-
-/* window > * {
-  font-family: "BigBlueTermPlus Nerd Font", "Symbols Nerd Font", sans-serif, monospace;
-  font-size: 12px;
-  background-color:#4a3f35;
-  padding:0px;
-  margin:0px;
-}
-
-#battery {
-	color: white;
-	background-color:#a9b9a5;
-	color:#3a4e5f;
-}
-
-#battery.full {
-	background-color: green;
-
-}
-
-#battery.warning {
-	background-color: orange;
-}
-
-
-#battery.critical {
-	background-color: red;
-}
-
-#battery.charging {
-	background-color: green;
-}
-
-#battery .icon {
-	margin-left:5px;
-	font-size:18px;
-}
-
-#language {
-	color: #3a4e5f;
-	background-color:#a9b9a5;
-}
-
-#clock {
-	color:#3a4e5f;
-	background-color:#a9b9a5;
-}
-
-#network {
-	color: #3a4e5f;
-	background-color:#a9b9a5;
-}
-
-#workspaces {
-	background-color:#2e4f3e;
-}
-font-family: "JetBrainsMono Nerd Font", monospace; */
-
-
-
-
