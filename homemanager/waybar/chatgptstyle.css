@@ -53,7 +53,6 @@
 #workspaces button:hover {
   background: rgba(180, 140, 255, 0.4);
   color: #ffffff;
-  transform: scale(1.05);
 }
 
 /* Hyprland workspaces */
@@ -75,7 +74,6 @@
 #hyprland-workspaces button:hover {
   background: rgba(160, 120, 255, 0.35);
   color: #ffffff;
-  transform: scale(1.05);
 }
 
 /* ============================= */
@@ -148,7 +146,6 @@
 #pulseaudio:hover {
   color: #d0b0ff;
   background: rgba(120, 80, 200, 0.25);
-  transform: scale(1.05);
 }
 
 /* ============================= */
