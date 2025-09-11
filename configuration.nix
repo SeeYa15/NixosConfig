@@ -136,6 +136,7 @@
     nerd-fonts.proggy-clean-tt
     nerd-fonts.jetbrains-mono
     nerd-fonts.dejavu-sans-mono
+    font-awesome
   ];
   fonts = {
     enableDefaultFonts = true;
