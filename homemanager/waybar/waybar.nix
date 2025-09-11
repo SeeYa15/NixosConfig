@@ -56,14 +56,14 @@
           format = "{icon} {volume}%";
           format-muted = "󰖁";
           format-icons = {
-            headphone = "󰋋";
-            hands-free = "󱡏";
-            headset = "󰋎";
-            speaker = "󰽟";
+            #headphone = "󰋋";
+            #hands-free = "󱡏";
+            #headset = "󰋎";
+            #speaker = "󰽟";
             #phone = "";
             #portable = "";
             #car = "";
-            #default = ["" "" ""];
+            default = ["" "" ""];
           };
           on-click = "pavucontrol";
 
@@ -74,13 +74,14 @@
         network = {
           interface = "wlp5s0";
           format = "{icon}";
-          format-wifi = "{essid} {icon}";
+          format-wifi = "{icon} {essid}";
           format-ethernet = "󰈁 {ifname}";
           format-disconnected = "{}"; #An empty format will hide the module.
           tooltip-format = "{ifname} via {gwaddr}";
           tooltip-format-wifi = "{signalStrength}%";
           tooltip-format-ethernet = "{ipaddr}/{bandwidthTotalBits}";
-          format-icons = ["󰖩" "󰤥" "󰤢" "󰤟" "󱚼"];
+          format-icons = ["󰖩" "󱚼"];
+          #format-icons = ["󰖩" "󰤥" "󰤢" "󰤟" "󱚼"];
           on-click = "nm-connection-editor";
           max-length = 50;
         };
