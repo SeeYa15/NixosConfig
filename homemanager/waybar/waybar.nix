@@ -63,7 +63,7 @@
             #phone = "";
             #portable = "";
             #car = "";
-            default = ["" "" ""];
+            default = ["" ""];
           };
           on-click = "pavucontrol";
 
@@ -80,7 +80,7 @@
           tooltip-format = "{ifname} via {gwaddr}";
           tooltip-format-wifi = "{signalStrength}%";
           tooltip-format-ethernet = "{ipaddr}/{bandwidthTotalBits}";
-          format-icons = ["󰖩" "󱚼"];
+          format-icons = ["󰖩"];
           #format-icons = ["󰖩" "󰤥" "󰤢" "󰤟" "󱚼"];
           on-click = "nm-connection-editor";
           max-length = 50;
