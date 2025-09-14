@@ -46,9 +46,9 @@
             "5" = "5";
             "default" = "";
           };
-          persistent-workspaces = {
-            "*" = 5;
-          };
+          # persistent-workspaces = {
+          #   "*" = 5;
+          # };
         };
 
 # Audio configuration
@@ -56,18 +56,9 @@
           format = "{icon} {volume}%";
           format-muted = "󰖁";
           format-icons = {
-            #headphone = "󰋋";
-            #hands-free = "󱡏";
-            #headset = "󰋎";
-            #speaker = "󰽟";
-            #phone = "";
-            #portable = "";
-            #car = "";
             default = ["" ""];
           };
           on-click = "pavucontrol";
-
-          #on-click = "~/.local/bin/volume-slider.sh";
           tooltip = false;
         };
 
