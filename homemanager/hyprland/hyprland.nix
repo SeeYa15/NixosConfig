@@ -22,8 +22,8 @@
       #      ];
 
       input = {
-        kb_layout = "se,us";
-        kb_variant = ",nodeadkeys";
+          kb_layout = "se,us";
+          kb_variant = "nodeadkeys,";
         kb_options = "grp:win_space_toggle";
       };
 
