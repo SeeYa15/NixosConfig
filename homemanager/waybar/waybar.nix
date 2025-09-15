@@ -33,7 +33,7 @@
           format = "Default:{short}";
           format-se = "{short}";
           format-eng = "{short}";
-          format-us = "{short}";
+          #format-us = "{short}";
           keyboard-name="squalius-cephalus-silakka54";
           tooltip = true;
           on-click = {};
