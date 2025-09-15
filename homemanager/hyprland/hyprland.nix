@@ -44,8 +44,8 @@
 
       #workspaces and monitor
       workspace = [ 
-        "1,name:testing, monitor:HDMI-A-1"
-        "2,name:what, monitor:HDMI-A-1"
+        "1,name:General, monitor:HDMI-A-1"
+        "2,name:Media, monitor:HDMI-A-1"
         "3,name:Work, monitor:HDMI-A-1"
       ];
 

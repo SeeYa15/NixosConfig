@@ -30,7 +30,11 @@
           "tray"
         ];
         "hyprland/language" = {
-          format = "Lang:{short}";
+          format = "Default:{short}";
+          format-se = "{short}";
+          format-eng = "{short}";
+          format-us = "{short}";
+          #keyboard-name="";
           tooltip = true;
           on-click = {};
           min-length = 7;
