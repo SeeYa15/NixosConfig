@@ -104,6 +104,10 @@
   animation: blink 1s infinite;
 }
 
+#language {
+  color: #a825a8;
+}
+
 /* ============================= */
 /*        CPU / Memory           */
 /* ============================= */

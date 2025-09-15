@@ -24,7 +24,7 @@
       input = {
           kb_layout = "se,us";
           kb_variant = "nodeadkeys,";
-        kb_options = "grp:win_space_toggle";
+          kb_options = "grp:win_space_toggle";
       };
 
       #Master Layout
@@ -57,7 +57,8 @@
         "$mod, SUPER_L, exec, pkill wofi || wofi --show drun"
         "$mod, Q, exec, kitty"
         "$mod, C, killactive"
-        "$mod, E, exec, lf"
+        #"$mod, E, exec, lf"
+        "$mod, E, exec, yazi"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
