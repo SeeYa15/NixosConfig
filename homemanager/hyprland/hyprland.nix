@@ -20,6 +20,11 @@
       #        "center,class:^(Spotify)$"
       #        "size 800 600,class:^(Spotify)$"
       #      ];
+      
+windowrulev2 =[ 
+        "tag:yazi" 
+        "class:^(kitty)$" 
+        "title:^(yazi)$"];
 
       input = {
           kb_layout = "se,us";
@@ -46,8 +51,11 @@
       #workspaces and monitor
       workspace = [ 
         "1,name:General, monitor:HDMI-A-1"
+        "1,name:General, monitor:eDP-1"
         "2,name:Media, monitor:HDMI-A-1"
+        "2,name:Media, monitor:eDP-1"
         "3,name:Work, monitor:HDMI-A-1"
+        "3,name:Work, monitor:eDP-1"
       ];
 
       "$mod"="SUPER";
@@ -58,7 +66,8 @@
         "$mod, Q, exec, kitty"
         "$mod, C, killactive"
         #"$mod, E, exec, lf"
-        "$mod, E, exec, yazi"
+        #"$mod, E, exec, kitty -e yazi"
+        "$mod, E, exec, hyprctl dispatch focuswindow tag:yazi || kitty --title yazi -e yazi"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
