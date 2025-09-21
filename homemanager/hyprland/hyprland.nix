@@ -65,8 +65,8 @@
         "$mod, Q, exec, kitty"
         "$mod, C, killactive"
         #"$mod, E, exec, lf"
-        #"$mod, E, exec, kitty -e yazi"
-        "$mod, E, exec, hyprctl dispatch focuswindow tag:yazi || kitty --title yazi -e yazi"
+        "$mod, E, exec, kitty -e yazi"
+        #"$mod, E, exec, hyprctl dispatch focuswindow tag:yazi || kitty --title yazi -e yazi"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
