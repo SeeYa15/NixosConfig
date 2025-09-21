@@ -22,9 +22,7 @@
       #      ];
       
       windowrulev2 = [ 
-        "tag:yazi" 
-        "class:^(kitty)$" 
-        "title:Yazi"
+        "tag:yazi, class:^(kitty)$,title:Yazi"
       ];
 
       input = {
