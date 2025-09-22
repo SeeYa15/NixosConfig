@@ -46,15 +46,19 @@
         fullscreen_opacity = 1;
 
       };
+      monitor = [
+        "HDMI-A-1,preferred,auto,1"
+        "eDP-1,preferred,auto,1"
+      ];
 
       #workspaces and monitor
       workspace = [ 
         "1,name:General, monitor:HDMI-A-1"
-        "1,name:General, monitor:eDP-1"
+        "1,name:General, default.true"
         "2,name:Media, monitor:HDMI-A-1"
-        "2,name:Media, monitor:eDP-1"
+        "2,name:Media, default:true"
         "3,name:Work, monitor:HDMI-A-1"
-        "3,name:Work, monitor:eDP-1"
+        "3,name:Work, default:true"
       ];
 
       "$mod"="SUPER";
@@ -64,7 +68,6 @@
         "$mod, SUPER_L, exec, pkill wofi || wofi --show drun"
         "$mod, Q, exec, kitty"
         "$mod, C, killactive"
-        #"$mod, E, exec, lf"
         "$mod, E, exec, kitty -e yazi"
         #"$mod, E, exec, hyprctl dispatch focuswindow tag:yazi || kitty --title yazi -e yazi"
 
