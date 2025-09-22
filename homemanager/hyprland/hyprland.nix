@@ -46,10 +46,10 @@
         fullscreen_opacity = 1;
 
       };
-      monitor = [
-        "HDMI-A-1,preferred,auto,1"
-        "eDP-1,preferred,auto,1"
-      ];
+      #      monitor = [
+      #        "HDMI-A-1,preferred,auto,1"
+      #        "eDP-1,preferred,auto,1"
+      #      ];
 
       #workspaces and monitor
       workspace = [ 
