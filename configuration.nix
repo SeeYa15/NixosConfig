@@ -87,7 +87,9 @@
   };
 
   programs.zsh.enable = true;
-
+  systemd = {
+    services.dlm.wantedBy = ["multi-user.target"];
+  };
   services = {
     xserver =  {
       xkb = {
@@ -95,7 +97,7 @@
         variant = "nodeadkeys";
 
       };
-      videoDriver = ["displaylink" "modesetting"];
+      videoDrivers = ["displaylink" "modesetting"];
     };
     getty.autologinUser = "johnnys";
     dbus.enable = true;
