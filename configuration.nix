@@ -11,9 +11,19 @@
     ];
   
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  
+  #boot.loader.systemd-boot.enable = true;
+  #boot.loader.efi.canTouchEfiVariables = true;
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 config.boot.kernelPackages.evdi ];
+    initrd = {
+      kernelModules = ["evdi"];
+    };
+  };
+
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
 
@@ -79,9 +89,13 @@
   programs.zsh.enable = true;
 
   services = {
-    xserver.xkb = {
-      layout = "se, us";
-      variant = "nodeadkeys";
+    xserver =  {
+      xkb = {
+        layout = "se, us";
+        variant = "nodeadkeys";
+
+      };
+      videoDriver = ["displaylink" "modesetting"];
     };
     getty.autologinUser = "johnnys";
     dbus.enable = true;
@@ -129,6 +143,7 @@
     chromium
     greetd.tuigreet #Login
     usbutils 
+    displaylink
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.bigblue-terminal

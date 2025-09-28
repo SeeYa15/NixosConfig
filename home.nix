@@ -92,7 +92,6 @@
       enable = true;
       enableBashIntegration = true;
     };
-    yazi.enable = true;
   };
 
   fonts.fontconfig.enable = true;
