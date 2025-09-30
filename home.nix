@@ -45,7 +45,9 @@
       yazi
 
       #DevelopPackages
-      python3Full
+      python313
+      python313Packages.pillow
+      python313Packages.tkinter
 
       #C++ packages
       gcc
