@@ -6,52 +6,56 @@
 
   home.packages = with pkgs; [
     neofetch
-      zip
-      unzip
-      ripgrep
-      jq
-      
-      #Terminal Search Fuzzy Finder
-      fzf
-      fd 
+    zip
+    unzip
+    ripgrep
+    jq
 
-      mtr #Terminal Network 
-      file
-      which
-      tree
-      kitty
-      #fuzzel #Used as a program starter. Wofi is being used atm
+    #Terminal Search Fuzzy Finder
+    fzf
+    fd 
 
-      vial #Keyboard configure
+    mtr #Terminal Network 
+    file
+    which
+    tree
+    kitty
+    #fuzzel #Used as a program starter. Wofi is being used atm
 
-      discord
-      steam
-      #System controllers / CTL
-      playerctl #Handling music, media player
-      brightnessctl #Handling Screen 
-      wireplumber
-      wl-clipboard
-      blueman
-      networkmanagerapplet
-      pavucontrol
-      pulseaudio
-      acpi #For checking battery, LID on laptop
-      nwg-displays
-      nwg-menu
+    vial #Keyboard configure
+
+    discord
+    steam
+    #System controllers / CTL
+    playerctl #Handling music, media player
+    brightnessctl #Handling Screen 
+    wireplumber
+    wl-clipboard
+    blueman
+    networkmanagerapplet
+    pavucontrol
+    pulseaudio
+    acpi #For checking battery, LID on laptop
+    nwg-displays
+    nwg-menu
 
 
-      desktop-file-utils
-      feh #Image viewer. Also used as a terminal. it can compile text and thumbnail listings, show (un)loadable files, set X11 backgrounds, and more.
-      yazi
+    desktop-file-utils
+    feh #Image viewer. Also used as a terminal. it can compile text and thumbnail listings, show (un)loadable files, set X11 backgrounds, and more.
+    yazi
 
-      #DevelopPackages
-      python313
-      python313Packages.pillow
-      python313Packages.tkinter
+    #Develop Packages
+    # ...
+    (python3.withPackages (python-pkgs: with python-pkgs; [
+      pandas
+      requests
+      tkinter
+      pillow
+    ]))
 
-      #C++ packages
-      gcc
-      gdb
+    #C++ packages
+    gcc
+    gdb
   ];
 
 
