@@ -34,9 +34,9 @@
       wrap = false;
       clipboard = "unnamedplus";
     };
-    autoCmd = {
-      
-    };
+    autoCmd =[ 
+
+    ];
 
 
     #PLUGINS#
