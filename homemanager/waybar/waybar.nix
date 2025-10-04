@@ -31,7 +31,8 @@
         ];
         "hyprland/language" = {
           format = "Lang:{short}";
-          keyboard-name="squalius-cephalus-silakka54";
+          # keyboard-name="squalius-cephalus-silakka54";
+          keyboard-name="";
           tooltip = true;
           on-click = {};
           min-length = 7;
