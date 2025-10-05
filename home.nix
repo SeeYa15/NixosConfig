@@ -25,7 +25,6 @@
     vial #Keyboard configure
 
     discord
-    steam
     #System controllers / CTL
     playerctl #Handling music, media player
     brightnessctl #Handling Screen 
@@ -73,6 +72,7 @@
       ./homemanager/wofi/wofi.nix
       ./homemanager/zsh/zsh.nix
       ./homemanager/btop/btop.nix
+      ./homemanager/steam/steam.nix
       #./homemanager/fuzzel/fuzzel.nix
       ./homemanager/yazi/yazi.nix
   ];

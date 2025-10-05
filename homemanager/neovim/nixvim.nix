@@ -35,7 +35,6 @@
       clipboard = "unnamedplus";
     };
     autoCmd =[ 
-
     ];
 
 
@@ -178,7 +177,7 @@
         settings = {
           auto_install = true;
           # ensure_installed = "all";
-          ensure_installed = [ "c" "cpp" "lua" "python" "nix" "c_sharp" "html" "nix" "tsx" "javascript" ]; # list languages you want
+          ensure_installed = [ "c" "cpp" "lua" "python" "nix" "c_sharp" "html" "nix" "tsx" "javascript" "vim" "vimdoc" "query"]; # list languages you want
 
           # Enable highlighting based on Tree-sitter
           highlight.enable = true;
