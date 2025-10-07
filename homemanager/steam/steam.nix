@@ -1,5 +1,4 @@
-#
-# {inputs, lib, pkgs, config, ...} : {
+ {inputs, lib, pkgs, config, ...} : {
 #   home.packages = with pkgs; 
 #     [
 #       steam
@@ -11,4 +10,4 @@
 #     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
 #     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
 #   };
-# }
+ }
