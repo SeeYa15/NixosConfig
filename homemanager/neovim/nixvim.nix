@@ -66,7 +66,7 @@ in
             enable = true;
             settings = {
               python = {
-                pythonpath = "etc/profiles/per-user/johnnys/bin/python3";
+                # pythonpath = "etc/profiles/per-user/johnnys/bin/python3";
                 analysis = {
                   typeCheckingMode = "basic";
                   autoImportCompletions = true;
