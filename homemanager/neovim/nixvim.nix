@@ -1,12 +1,24 @@
-{inputs, lib, pkgs, config, ...} : {
+{inputs, lib, pkgs, config, ...} : 
+let 
+  mypath = (pkgs.python3.withPackages (python-pkgs: with python-pkgs; [
+      pandas
+      requests
+      tkinter
+      numpy
+      ruff
+      black
+      pillow
+  ]));
   #NIXVIM
-
+in
+{
   home.packages = with pkgs; [
     csharp-ls
     lua-language-server
     nixd
     clang-tools    # includes clangd
     pyright
+    mypath
   ];
 
 
@@ -50,7 +62,20 @@
           nixd.enable = true;
           omnisharp.enable = true;
           html.enable = true;
-          pyright.enable = true;
+          pyright = {
+            enable = true;
+            settings = {
+              python = {
+                pythonpath = "${mypath}/bin/python3";
+                analysis = {
+                  typeCheckingMode = "basic";
+                  autoImportCompletions = true;
+                  autoSearchPaths = true;
+                  useLibraryCodeForTypes = true;
+                };
+              };
+            };
+          };
         };
         keymaps = {
           diagnostic = {
@@ -160,6 +185,7 @@
             tidy.enable = true; #HTML
             pylint.enable = true;
             deadnix.enable = true;
+            ruff.enable = true;
           };
           formatting = {
             csharpier.enable = true;
@@ -167,6 +193,7 @@
             stylua.enable = true;
             prettier.enable = true;
             htmlbeautifier.enable = true;
+            black.enable = true;
           };
         };
       };
