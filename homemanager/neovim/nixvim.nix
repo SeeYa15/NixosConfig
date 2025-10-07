@@ -1,16 +1,16 @@
 {inputs, lib, pkgs, config, ...} : 
-let 
-  mypath = (pkgs.python3.withPackages (python-pkgs: with python-pkgs; [
-      pandas
-      requests
-      tkinter
-      numpy
-      ruff
-      black
-      pillow
-  ]));
-  #NIXVIM
-in
+# let 
+#   mypath = (pkgs.python3.withPackages (python-pkgs: with python-pkgs; [
+#       pandas
+#       requests
+#       tkinter
+#       numpy
+#       ruff
+#       black
+#       pillow
+#   ]));
+#   #NIXVIM
+# in
 {
   home.packages = with pkgs; [
     csharp-ls
@@ -18,7 +18,7 @@ in
     nixd
     clang-tools    # includes clangd
     pyright
-    mypath
+    # mypath
   ];
 
 
