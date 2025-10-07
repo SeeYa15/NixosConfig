@@ -64,17 +64,17 @@
           html.enable = true;
           pyright = {
             enable = true;
-            settings = {
-              python = {
-                # pythonpath = "etc/profiles/per-user/johnnys/bin/python3";
-                analysis = {
-                  typeCheckingMode = "basic";
-                  autoImportCompletions = true;
-                  autoSearchPaths = true;
-                  useLibraryCodeForTypes = true;
-                };
-              };
-            };
+            # settings = {
+            #   python = {
+            #     # pythonpath = "etc/profiles/per-user/johnnys/bin/python3";
+            #     analysis = {
+            #       typeCheckingMode = "basic";
+            #       autoImportCompletions = true;
+            #       autoSearchPaths = true;
+            #       useLibraryCodeForTypes = true;
+            #     };
+            #   };
+            # };
           };
         };
         keymaps = {
