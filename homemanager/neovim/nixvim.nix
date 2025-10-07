@@ -185,7 +185,6 @@ in
             tidy.enable = true; #HTML
             pylint.enable = true;
             deadnix.enable = true;
-            ruff.enable = true;
           };
           formatting = {
             csharpier.enable = true;
