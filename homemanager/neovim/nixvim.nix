@@ -1,16 +1,4 @@
 {inputs, lib, pkgs, config, ...} : 
-# let 
-#   mypath = (pkgs.python3.withPackages (python-pkgs: with python-pkgs; [
-#       pandas
-#       requests
-#       tkinter
-#       numpy
-#       ruff
-#       black
-#       pillow
-#   ]));
-#   #NIXVIM
-# in
 {
   home.packages = with pkgs; [
     csharp-ls
@@ -18,7 +6,6 @@
     nixd
     clang-tools    # includes clangd
     pyright
-    # mypath
   ];
 
 
@@ -64,17 +51,6 @@
           html.enable = true;
           pyright = {
             enable = true;
-            # settings = {
-            #   python = {
-            #     # pythonpath = "etc/profiles/per-user/johnnys/bin/python3";
-            #     analysis = {
-            #       typeCheckingMode = "basic";
-            #       autoImportCompletions = true;
-            #       autoSearchPaths = true;
-            #       useLibraryCodeForTypes = true;
-            #     };
-            #   };
-            # };
           };
         };
         keymaps = {
@@ -82,13 +58,13 @@
             "<leader>j" = "goto_next";
           };
           lspBuf = {
-          K = "hover";
-          gD = "references";
-          gd = "definition";
-          gi = "implementation";   
-          gt = "type_definition";
-          "<leader>k" = "code_action";
-        };
+            K = "hover";
+            gD = "references";
+            gd = "definition";
+            gi = "implementation";   
+            gt = "type_definition";
+            "<leader>k" = "code_action";
+          };
         };
       };
 
@@ -192,7 +168,6 @@
             stylua.enable = true;
             prettier.enable = true;
             htmlbeautifier.enable = true;
-            black.enable = true;
           };
         };
       };
@@ -202,7 +177,6 @@
         autoLoad = true;
         settings = {
           auto_install = true;
-          # ensure_installed = "all";
           ensure_installed = [ "c" "cpp" "lua" "python" "nix" "c_sharp" "html" "nix" "tsx" "javascript" "vim" "vimdoc" "query"]; # list languages you want
 
           # Enable highlighting based on Tree-sitter
