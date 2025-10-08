@@ -27,7 +27,7 @@
     hyprsunset
     nautilus
     udiskie
-    swaync
+    swaynotificationcenter
     wayclip
     discord
     #System controllers / CTL
