@@ -23,7 +23,12 @@
     #fuzzel #Used as a program starter. Wofi is being used atm
 
     vial #Keyboard configure
-
+    hyprpicker
+    hyprsunset
+    nautilus
+    udiskie
+    clipvault
+    swaync
     discord
     #System controllers / CTL
     playerctl #Handling music, media player
@@ -34,15 +39,14 @@
     networkmanagerapplet
     pavucontrol
     pulseaudio
+    pipewire
     acpi #For checking battery, LID on laptop
-    nwg-displays
-    nwg-menu
-
-
-    desktop-file-utils
-    feh #Image viewer. Also used as a terminal. it can compile text and thumbnail listings, show (un)loadable files, set X11 backgrounds, and more.
+    swayimg
+  #  feh #Image viewer. Also used as a terminal. it can compile text and thumbnail listings, show (un)loadable files, set X11 backgrounds, and more.
     yazi
-
+    qt5-wayland
+    qt6-wayland
+    obs-studio
     #Develop Packages
     # ...
      (python3.withPackages (python-pkgs: with python-pkgs; [
