@@ -27,14 +27,14 @@
     hyprsunset
     nautilus
     udiskie
-    clipvault
     swaync
+    wayclip
     discord
     #System controllers / CTL
     playerctl #Handling music, media player
     brightnessctl #Handling Screen 
     wireplumber
-    wl-clipboard
+    # wl-clipboard
     blueman
     networkmanagerapplet
     pavucontrol
