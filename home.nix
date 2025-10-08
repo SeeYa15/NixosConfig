@@ -44,8 +44,6 @@
     swayimg
   #  feh #Image viewer. Also used as a terminal. it can compile text and thumbnail listings, show (un)loadable files, set X11 backgrounds, and more.
     yazi
-    qt5-wayland
-    qt6-wayland
     obs-studio
     #Develop Packages
     # ...
