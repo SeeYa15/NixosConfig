@@ -36,6 +36,7 @@
     wireplumber
     # wl-clipboard
     blueman
+    tldr
     networkmanagerapplet
     pavucontrol
     pulseaudio
