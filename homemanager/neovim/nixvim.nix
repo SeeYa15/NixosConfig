@@ -49,7 +49,10 @@
           nixd.enable = true;
           omnisharp.enable = true;
           html.enable = true;
-          basedpyright.enable = true;
+          basedpyright = {
+            settings.python.pythonPath = "python3";
+            enable = true;
+          };
           # pyright = {
           #   enable = true;
           # };
@@ -72,6 +75,7 @@
         enable = true;
         autoLoad = true;
       };
+      direnv.enable = true;
 
       # cmp is a hub for gathering sources and display. Still need to enable each plugin.
       cmp = {
