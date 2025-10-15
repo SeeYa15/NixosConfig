@@ -49,9 +49,10 @@
           nixd.enable = true;
           omnisharp.enable = true;
           html.enable = true;
-          pyright = {
-            enable = true;
-          };
+          basedpyright.enable = true;
+          # pyright = {
+          #   enable = true;
+          # };
         };
         keymaps = {
           diagnostic = {
@@ -68,6 +69,7 @@
         };
       };
 
+      # cmp is a hub for gathering sources and display. Still need to enable each plugin.
       cmp = {
         enable = true;
         autoEnableSources = true;
@@ -85,15 +87,22 @@
             "<Tab>" = "cmp.mapping.select_next_item()";
             "<S-Tab>" = "cmp.mapping.select_prev_item()";
             "<CR>" = "cmp.mapping.confirm({ select = true })";
-            "<C-leader>" = "cmp.mapping.complete()";
+            "<C-Space>" = "cmp.mapping.complete()";
+            "<C-E>" = "cmp.mapping.abort()";
           };
         };
 
       };
-      # Enable the integrations
-      cmp-nvim-lsp.enable = true;      # Connects cmp to LSP
-      cmp_luasnip.enable = true;       # Connects cmp to snippets
-      luasnip.enable = true;           # Snippet engine
+      
+      cmp-nvim-lsp.enable = true;
+      cmp-treesitter.enable = true;
+      cmp-nvim-lsp-document-symbol.enable = true;
+      cmp-nvim-lsp-signature-help.enable = true;
+      # Snippet engine
+      luasnip = {
+        enable = true;
+        autoLoad = true;
+      };
 
       friendly-snippets = {
         enable = true;
