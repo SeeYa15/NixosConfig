@@ -85,6 +85,12 @@
       xwayland.enable = true;
       package = inputs.hyprland.packages.${pkgs.system}.hyprland;
   };
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+    localNetworkGameTransfers.openFirewall = true;
+  };
 
   programs.zsh.enable = true;
   systemd = {
