@@ -66,6 +66,8 @@
         "$mod, Q, exec, kitty"
         "$mod, C, killactive"
         "$mod, E, exec, kitty -e yazi"
+        "$mod, SHIFT, S, exec, grimblast copysave area"
+        "$mod, CTRL, S, exec, grimblast save area - | satty --filename -"
         #"$mod, E, exec, hyprctl dispatch focuswindow tag:yazi || kitty --title yazi -e yazi"
 
         "$mod, 1, workspace, 1"

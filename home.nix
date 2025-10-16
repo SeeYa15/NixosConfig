@@ -46,6 +46,8 @@
   #  feh #Image viewer. Also used as a terminal. it can compile text and thumbnail listings, show (un)loadable files, set X11 backgrounds, and more.
     yazi
     obs-studio
+    satty
+    inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
     #Develop Packages
     # ...
      # (python3.withPackages (python-pkgs: with python-pkgs; [
