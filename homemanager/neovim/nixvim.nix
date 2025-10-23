@@ -5,7 +5,6 @@
     lua-language-server
     nixd
     clang-tools    # includes clangd
-    pyright
   ];
 
   programs.direnv = {

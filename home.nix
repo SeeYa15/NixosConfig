@@ -2,7 +2,7 @@
 {
   home.username = "johnnys";
   home.homeDirectory = "/home/johnnys";
-  home.file.".config/waybar/style.css".source = ./homemanager/waybar/chatgptstyle.css;
+  # home.file.".config/waybar/style.css".source = ./homemanager/waybar/chatgptstyle.css;
 
   home.packages = with pkgs; [
     neofetch

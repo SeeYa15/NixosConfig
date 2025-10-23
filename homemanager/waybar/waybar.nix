@@ -2,6 +2,9 @@
 
   home.packages = [pkgs.waybar];
 
+  home.file.".config/waybar/style.css".source = ./homemanager/waybar/chatgptstyle.css;
+  home.file.".config/waybar/power_menu.xml".source = ./homemanager/waybar/power_menu.xml;
+
   programs.waybar = {
     enable = true;
     settings = {
@@ -28,6 +31,7 @@
           "network"
           "battery"
           "tray"
+          "customer/power"
         ];
         "hyprland/language" = {
           format = "Lang:{short}";
@@ -52,6 +56,18 @@
           #   "*" = 5;
           # };
         };
+      "custom/power" = {
+        format = "⏻";
+        tooltip= false;
+        menu = "on-click";
+        menu-file = "~/.config/waybar/power_menu.xml";
+        menu-actions = {
+            shutdown = "shutdown";
+            reboot = "reboot";
+            suspend = "systemctl suspend";
+            hibernate = "systemctl hibernate";
+        };
+      };
 
 # Audio configuration
         pulseaudio = {
