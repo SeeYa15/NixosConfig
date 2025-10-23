@@ -31,7 +31,7 @@
           "network"
           "battery"
           "tray"
-          "customer/power"
+          "custom/power"
         ];
         "hyprland/language" = {
           format = "Lang:{short}";
