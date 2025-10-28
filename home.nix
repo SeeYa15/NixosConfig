@@ -30,9 +30,13 @@
     swaynotificationcenter
     wayclip
     discord
+    swww
+    waypaper
     #System controllers / CTL
     playerctl #Handling music, media player
     brightnessctl #Handling Screen 
+    pactl
+    iwconfig
     wireplumber
     wl-clipboard
     blueman

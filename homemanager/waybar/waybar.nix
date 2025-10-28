@@ -35,6 +35,8 @@
         ];
         "hyprland/language" = {
           format = "Lang:{short}";
+          format-se = "SE";
+          format-en = "US";
           # keyboard-name="squalius-cephalus-silakka54";
           keyboard-name="";
           tooltip = true;
@@ -62,7 +64,7 @@
         menu = "on-click";
         menu-file = "~/.config/waybar/power_menu.xml";
         menu-actions = {
-            shutdown = "shutdown";
+            shutdown = "poweroff";
             reboot = "reboot";
             suspend = "systemctl suspend";
             hibernate = "systemctl hibernate";
