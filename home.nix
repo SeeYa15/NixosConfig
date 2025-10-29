@@ -35,7 +35,6 @@
     #System controllers / CTL
     playerctl #Handling music, media player
     brightnessctl #Handling Screen 
-    iwconfig
     wireplumber
     wl-clipboard
     blueman
