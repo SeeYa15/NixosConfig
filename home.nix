@@ -31,7 +31,6 @@
     wayclip
     discord
     swww
-    swww-daemon
     waypaper
     #System controllers / CTL
     playerctl #Handling music, media player
