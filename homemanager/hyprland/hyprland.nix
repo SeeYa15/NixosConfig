@@ -12,6 +12,7 @@
         "waybar"
         "nm-applet --indicator"
         "blueman-applet"
+        "swww-daemon"
       ];
 
 
