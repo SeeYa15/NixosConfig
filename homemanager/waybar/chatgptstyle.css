@@ -19,8 +19,8 @@
 /* Module Defaults */
 #waybar > * {
   background: transparent;
-  padding: 4px 10px;
-  margin: 0 5px;
+  padding: 4px 15px;
+  margin: 0 10px;
   border-radius: 8px;
   transition: background 0.3s ease, color 0.3s ease;
 }
@@ -75,6 +75,10 @@
   background: rgba(160, 120, 255, 0.35);
   color: #ffffff;
 }
+
+#custom-power = {
+  color:"red";
+};
 
 /* ============================= */
 /*            Clock              */
