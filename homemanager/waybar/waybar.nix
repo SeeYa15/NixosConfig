@@ -38,7 +38,6 @@
           format-se = "SE";
           format-en = "US";
           # keyboard-name="squalius-cephalus-silakka54";
-          keyboard-name="";
           tooltip = true;
           on-click = {};
           min-length = 7;

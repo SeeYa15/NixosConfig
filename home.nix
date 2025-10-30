@@ -5,8 +5,8 @@
   # home.file.".config/waybar/style.css".source = ./homemanager/waybar/chatgptstyle.css;
 
   home.packages = with pkgs; [
-    neofetch
     zip
+    fastfetch
     unzip
     ripgrep
     jq
