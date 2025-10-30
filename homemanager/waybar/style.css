@@ -53,6 +53,11 @@ window#waybar {
   border-radius: 6px;
 }
 
+#custom/power {
+  background-color: "red";
+  margin-right:20px;
+}
+
 #clock {
   background-color: #c4514d;
 }
@@ -70,6 +75,7 @@ window#waybar {
 }
 #language{
   background-color: rgba(204,33,101,1);
+  margin-left:20px
 }
 
 #network {
