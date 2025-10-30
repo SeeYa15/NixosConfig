@@ -76,9 +76,9 @@
   color: #ffffff;
 }
 
-#custom-power = {
-  color: #327837;
-}
+#custom-power {
+  color:"red"
+};
 
 /* ============================= */
 /*            Clock              */
