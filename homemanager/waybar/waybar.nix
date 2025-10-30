@@ -34,9 +34,10 @@
           "custom/power"
         ];
         "hyprland/language" = {
-          format = "Lang:{short}";
+          format = "{}";
           format-se = "SE";
           format-en = "US";
+          keyboard-name = "keychron-k2";
           # keyboard-name="squalius-cephalus-silakka54";
           tooltip = true;
           on-click = {};
