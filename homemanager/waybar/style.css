@@ -53,7 +53,7 @@ window#waybar {
   border-radius: 6px;
 }
 
-#custom/power {
+#custom-power {
   background-color: "red";
   margin-right:20px;
 }
@@ -67,7 +67,8 @@ window#waybar {
 }
 
 #battery {
-  background-color: #a3be8c;
+  /* background-color: #a3be8c; */
+  background-color: "red";
 }
 
 #battery button.hover {
