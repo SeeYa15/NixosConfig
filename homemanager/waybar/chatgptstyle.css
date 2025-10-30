@@ -20,7 +20,7 @@
 #waybar > * {
   background: transparent;
   padding: 4px 15px;
-  margin: 15px 100px;
+  margin: 0 10px;
   border-radius: 8px;
   transition: background 0.3s ease, color 0.3s ease;
 }
@@ -78,6 +78,7 @@
 
 #custom-power {
   color: #327837;
+  margin-left: 50px;
 }
 
 /* ============================= */
