@@ -50,14 +50,6 @@
     satty
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
     #Develop Packages
-    # ...
-     # (python3.withPackages (python-pkgs: with python-pkgs; [
-     #   pandas
-     #   requests
-     #   tkinter
-     #   pillow
-     # ]))
-
     #C++ packages
     gcc
     gdb
