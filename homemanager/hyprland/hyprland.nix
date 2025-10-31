@@ -54,9 +54,10 @@
 
       #workspaces and monitor
       workspace = [ 
-        "1,name:General, monitor:DP-1, default:true"
-        "2,name:Media, monitor:DP-1, default:true"
-        "3,name:Work, monitor:DP-1, default:true"
+        "1,name:General, monitor:DVI-I-1, default:true"
+        "2,name:Media, monitor:DVI-I-1, default:true"
+        "3,name:Work, monitor:DVI-I-1, default:true"
+        "4,name:Extra, monitor:DVI-I-2, default:true"
       ];
 
       "$mod"="SUPER";
