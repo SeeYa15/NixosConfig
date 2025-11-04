@@ -27,17 +27,29 @@
 
         modules-right = [
           "hyprland/language"
+          "hyprland/language#fourzee"
           "pulseaudio"
           "network"
           "battery"
           "tray"
           "custom/power"
         ];
+
+        "hyprland/language#fourzee" = {
+          format = "Fourzee:{short}";
+          format-se = "SE";
+          format-en = "US";
+          keyboard-name = "sino-wealth-mechanical-keyboard";
+          # keyboard-name="squalius-cephalus-silakka54";
+          tooltip = true;
+          on-click = {};
+          min-length = 7;
+        };
         "hyprland/language" = {
           format = "{}";
           format-se = "SE";
           format-en = "US";
-          keyboard-name = "keychron-k2";
+          keyboard-name = "at-translated-set-2-keyboard";
           # keyboard-name="squalius-cephalus-silakka54";
           tooltip = true;
           on-click = {};
