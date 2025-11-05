@@ -27,7 +27,6 @@
 
         modules-right = [
           "hyprland/language"
-          # "hyprland/language#fourzee"
           "pulseaudio"
           "network"
           "battery"
@@ -35,17 +34,9 @@
           "custom/power"
         ];
 
-        # "hyprland/language#fourzee" = {
-        #   format = "Fourzee:{short}";
-        #   format-se = "SE";
-        #   format-en = "US";
-        #   on-click = {};
-        #   min-length = 7;
-        # };
-     
         "hyprland/language" = {
           format = "{}";
-          format-se = "SE";
+          format-sv = "SE";
           format-en = "US";
           # keyboard-name = "at-translated-set-2-keyboard";
           tooltip = true;
