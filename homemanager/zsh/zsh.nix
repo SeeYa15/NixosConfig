@@ -20,7 +20,7 @@
       nixpush = ''
         git add . && git commit -am "update: $(date '+%Y-%m-%d %H:%M')" && git push
       '';    
-      conf = "cd ~/Nixosconfig/";
+      conf = "cd ~/NixosConfig/";
       codes = "cd ~/Scripts/python/";
     };
   };

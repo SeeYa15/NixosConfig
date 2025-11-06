@@ -47,10 +47,6 @@
         fullscreen_opacity = 1;
 
       };
-      #      monitor = [
-      #        "HDMI-A-1,preferred,auto,1"
-      #        "eDP-1,preferred,auto,1"
-      #      ];
 
       #workspaces and monitor
       workspace = [ 
@@ -72,7 +68,6 @@
         "$mod, F, fullscreen"
         "$mod CTRL, S, exec, grimblast save area - | satty --filename -"
         "CTRL, N, exec, kitty -e nvim ."
-        #"$mod, E, exec, hyprctl dispatch focuswindow tag:yazi || kitty --title yazi -e yazi"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
@@ -88,6 +83,11 @@
         "$mod SHIFT, 5, movetoworkspace, 6"
         "$mod SHIFT, 5, movetoworkspace, 6"
 
+        "$mod SHIFT, Left, movewindow, l"
+        "$mod SHIFT, Right, movewindow, r"
+        "$mod SHIFT, Up, movewindow, u"
+        "$mod SHIFT, Down, movewindow, d"
+        
         "$mod, Left, movefocus, l"
         "$mod, Right, movefocus, r"
         "$mod, Up, movefocus, u"
