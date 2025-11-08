@@ -110,7 +110,8 @@
       # Snippet engine
       luasnip = {
         enable = true;
-        autoLoad = true;
+        fromVscode = [{}];
+        # autoLoad = true;
       };
 
       friendly-snippets = {
