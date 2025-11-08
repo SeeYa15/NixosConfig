@@ -71,10 +71,10 @@
           };
         };
       };
-      lspconfig = {
-        enable = true;
-        autoLoad = true;
-      };
+      # lspconfig = {
+      #   enable = true;
+      #   autoLoad = true;
+      # };
       direnv.enable = true;
 
       # cmp is a hub for gathering sources and display. Still need to enable each plugin.
@@ -89,6 +89,9 @@
             { name = "path"; }
             { name = "buffer"; }
           ];
+          snippet = {
+            expand = "function(args) require('luasnip').lsp_expand(args.body) end";
+          };
           mapping = {
             "<Tab>" = "cmp.mapping.select_next_item()";
             "<S-Tab>" = "cmp.mapping.select_prev_item()";
@@ -98,9 +101,9 @@
           };
         };
       };
-      cmp-nvim-lsp.enable = true;
-      cmp-nvim-lua.enable = true;
-      cmp_luasnip.enable = true;
+      # cmp-nvim-lsp.enable = true;
+      # cmp-nvim-lua.enable = true;
+      # cmp_luasnip.enable = true;
       cmp-treesitter.enable = true;
       cmp-nvim-lsp-document-symbol.enable = true;
       cmp-nvim-lsp-signature-help.enable = true;
