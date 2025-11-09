@@ -84,7 +84,7 @@
         settings = {
           sources = [
             { name = "nvim_lsp"; }
-            # { name = "nvim_lua"; }
+            { name = "nvim_lua"; }
             { name = "luasnip";}
             { name = "path"; }
             { name = "buffer"; }
@@ -101,7 +101,7 @@
           };
         };
       };
-      # cmp-nvim-lsp.enable = true;
+      cmp-nvim-lsp.enable = true;
       cmp-nvim-lua.enable = true;
       cmp_luasnip.enable = true;
       cmp-treesitter.enable = true;
