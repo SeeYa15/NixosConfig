@@ -38,6 +38,9 @@
     };
     autoCmd =[ 
     ];
+    extraConfigLua = ''
+      require(".luascripts.extracommand.lua")
+    '';
 
 
     #PLUGINS#
@@ -71,10 +74,6 @@
           };
         };
       };
-      # lspconfig = {
-      #   enable = true;
-      #   autoLoad = true;
-      # };
       direnv.enable = true;
 
       # cmp is a hub for gathering sources and display. Still need to enable each plugin.
@@ -95,7 +94,7 @@
           mapping = {
             "<Tab>" = "cmp.mapping.select_next_item()";
             "<S-Tab>" = "cmp.mapping.select_prev_item()";
-            "<CR>" = "cmp.mapping.confirm({ select = true })";
+            "<CR>" = "cmp.mapping.confirm({ select = false })";
             "<C-Space>" = "cmp.mapping.complete()";
             "<C-E>" = "cmp.mapping.abort()";
           };
