@@ -39,7 +39,7 @@
     autoCmd =[ 
     ];
     extraConfigLua = ''
-      require("extracommand.lua")
+      require("./lua/extracommand.lua")
     '';
 
 
