@@ -39,7 +39,7 @@
     autoCmd =[ 
     ];
     extraFiles = {
-      "luascripts/extracommand.lua".text = ''
+      "lua/extracommand.lua".text = ''
 
       --Define a command
       vim.api.nvim_create_user_command("Greet", function ()
@@ -54,7 +54,7 @@
     #   "luascripts/extracommand.lua".source = ./neovim/luascripts/extracommand.lua;
     # };
     extraConfigLua = ''
-      require("luascripts.extracommand")
+      require("extracommand")
     '';
 
 
