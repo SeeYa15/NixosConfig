@@ -39,10 +39,10 @@
     autoCmd =[ 
     ];
     extraFiles = {
-      "lua/extracommand.lua".sources = ./luascripts/extracommand.lua;
+      "luascripts/extracommand.lua".source = ./luascripts/extracommand.lua;
     };
     extraConfigLua = ''
-      require("lua/extracommand.lua")
+      require("luascripts.extracommand")
     '';
 
 
