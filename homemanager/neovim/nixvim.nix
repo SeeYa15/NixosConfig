@@ -42,7 +42,7 @@
       "lua/extracommand.lua".sources = ./luascripts/extracommand.lua;
     };
     extraConfigLua = ''
-      require("./lua/extracommand.lua")
+      require("lua/extracommand.lua")
     '';
 
 
