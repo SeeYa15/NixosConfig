@@ -21,7 +21,7 @@
     tree
     kitty
     #fuzzel #Used as a program starter. Wofi is being used atm
-
+    asciicam
     vial #Keyboard configure
     hyprpicker
     hyprsunset
