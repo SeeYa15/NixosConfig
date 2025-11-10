@@ -150,6 +150,7 @@
     chromium
     greetd.tuigreet #Login
     usbutils 
+    webcamoid
     displaylink
   ];
   fonts.packages = with pkgs; [

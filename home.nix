@@ -22,7 +22,6 @@
     kitty
     #fuzzel #Used as a program starter. Wofi is being used atm
     asciicam
-    webcamoid
     vial #Keyboard configure
     hyprpicker
     hyprsunset
