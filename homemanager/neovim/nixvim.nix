@@ -53,9 +53,9 @@
     # extraFiles = {
     #   "luascripts/extracommand.lua".source = ./neovim/luascripts/extracommand.lua;
     # };
-    # extraConfigLua = ''
-    #   require("luascripts.extracommand")
-    # '';
+    extraConfigLua = ''
+      require("luascripts.extracommand")
+    '';
 
 
     #PLUGINS#
