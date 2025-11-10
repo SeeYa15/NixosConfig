@@ -38,6 +38,9 @@
     };
     autoCmd =[ 
     ];
+    extraFiles = {
+      "lua/extracommand.lua".sources = ./luascripts/extracommand.lua;
+    };
     extraConfigLua = ''
       require("./lua/extracommand.lua")
     '';
