@@ -52,6 +52,7 @@
     # };
     extraFiles = {
       "lua/luascripts/extracommand.lua".source = ./luascripts/extracommand.lua;
+      "lua/luascripts/Buffermovement.lua".source = ./luascripts/Buffermovement.lua;
     };
     # extraConfigLua = ''
     #   require("extracommand")
@@ -59,6 +60,7 @@
 
     extraConfigLua = ''
       require("luascripts.extracommand")
+      require("luascripts.Buffermovement")
     '';
 
     #PLUGINS#
@@ -67,7 +69,6 @@
       lsp = {
         enable = true;
         servers = {
-          # csharp_ls.enable = true;
           lua_ls.enable = true;
           clangd.enable = true;
           nixd.enable = true;
