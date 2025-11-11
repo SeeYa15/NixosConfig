@@ -38,25 +38,28 @@
     };
     autoCmd =[ 
     ];
-    extraFiles = {
-      "lua/extracommand.lua".text = ''
-
-      --Define a command
-      vim.api.nvim_create_user_command("Greet", function ()
-      print("Hello from my command")
-      end, {})
-
-
-      vim.keymap.set("n", "<leader>p", "<cmd>Greet<cr>", {desc = "Run Greet Command"})
-      '';
-    };
     # extraFiles = {
-    #   "luascripts/extracommand.lua".source = ./neovim/luascripts/extracommand.lua;
+    #   "lua/extracommand.lua".text = ''
+    #
+    #   --Define a command
+    #   vim.api.nvim_create_user_command("Greet", function ()
+    #   print("Hello from my command")
+    #   end, {})
+    #
+    #
+    #   vim.keymap.set("n", "<leader>p", "<cmd>Greet<cr>", {desc = "Run Greet Command"})
+    #   '';
     # };
-    extraConfigLua = ''
-      require("extracommand")
-    '';
+    extraFiles = {
+      "lua/extracommand.lua".source = ./luascripts/extracommand.lua;
+    };
+    # extraConfigLua = ''
+    #   require("extracommand")
+    # '';
 
+    extraConfigLua = ''
+      require("luascripts.extracommand")
+    '';
 
     #PLUGINS#
     plugins = {
