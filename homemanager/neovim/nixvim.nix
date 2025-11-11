@@ -51,7 +51,7 @@
     #   '';
     # };
     extraFiles = {
-      "lua/extracommand.lua".source = ./luascripts/extracommand.lua;
+      "lua/luascripts/extracommand.lua".source = ./luascripts/extracommand.lua;
     };
     # extraConfigLua = ''
     #   require("extracommand")
