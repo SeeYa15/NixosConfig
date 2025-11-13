@@ -48,13 +48,17 @@
 
       };
 
+      dwindle = {
+        pseudotile = true;
+      };
       #workspaces and monitor
       workspace = [ 
         "1,name:FirstClass, monitor:eDP-1, default:false"
-        "1,name:General, monitor:DVI-I-1, default:false"
+        "1,name:General, monitor:DVI-I-1, default:true"
         "2,name:Media, monitor:DVI-I-1, default:true"
         "3,name:Work, monitor:DVI-I-1, default:true"
         "4,name:Extra, monitor:DVI-I-2, default:true"
+        "5, monitor:DVI-I-2, default:false"
       ];
 
       "$mod"="SUPER";
@@ -68,7 +72,10 @@
         "$mod SHIFT, S, exec, grimblast copysave area"
         "$mod, F, fullscreen"
         "$mod CTRL, S, exec, grimblast save area - | satty --filename -"
-        "CTRL, N, exec, kitty -e nvim ."
+        "$mod CTRL, N, exec, kitty -e nvim ."
+        "$mod, V, togglefloating"
+        "$mod, P, pseudo"
+
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
