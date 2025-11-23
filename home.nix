@@ -49,10 +49,6 @@
     obs-studio
     satty
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
-    #Develop Packages
-    #C++ packages
-    gcc
-    gdb
   ];
 
 

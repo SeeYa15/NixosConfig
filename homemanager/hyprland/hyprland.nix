@@ -37,7 +37,7 @@
         special_scale_factor = 0.5;
         allow_small_split = true;
         mfact = 0.70;
-        orientation = "left";
+        orientation = "top";
       };
 
       #Decoration

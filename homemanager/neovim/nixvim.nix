@@ -1,10 +1,10 @@
 {inputs, lib, pkgs, config, ...} : 
 {
   home.packages = with pkgs; [
-    csharp-ls
-    lua-language-server
-    nixd
-    clang-tools    # includes clangd
+    # csharp-ls
+    # lua-language-server
+    # nixd
+    # clang-tools    # includes clangd
   ];
 
   programs.direnv = {
@@ -98,7 +98,7 @@
       # cmp is a hub for gathering sources and display. Still need to enable each plugin.
       cmp = {
         enable = true;
-        autoEnableSources = true;
+        autoEnableSources = false;
         settings = {
           sources = [
             { name = "nvim_lsp"; }
