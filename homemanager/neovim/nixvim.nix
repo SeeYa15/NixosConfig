@@ -72,6 +72,7 @@
           lua_ls.enable = true;
           clangd.enable = true;
           nixd.enable = true;
+          rust_analyzer.enable = true;
           omnisharp.enable = true;
           html.enable = true;
           basedpyright = {
@@ -98,7 +99,7 @@
       # cmp is a hub for gathering sources and display. Still need to enable each plugin.
       cmp = {
         enable = true;
-        autoEnableSources = false;
+        autoEnableSources = true;
         settings = {
           sources = [
             { name = "nvim_lsp"; }
@@ -129,7 +130,7 @@
       luasnip = {
         enable = true;
         fromVscode = [{}];
-        # autoLoad = true;
+        autoLoad = true;
       };
 
       friendly-snippets = {
@@ -187,7 +188,6 @@
 
         sources = {
           completion = {
-            # luasnip.enable = true;
             nvim_snippets.enable = true;
             spell.enable = true;
             tags.enable = true;
