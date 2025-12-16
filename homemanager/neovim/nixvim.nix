@@ -189,6 +189,7 @@
         sources = {
           completion = {
             nvim_snippets.enable = true;
+            luasnip.enable = true;
             spell.enable = true;
             tags.enable = true;
           };
@@ -206,6 +207,10 @@
             prettier.enable = true;
             htmlbeautifier.enable = true;
           };
+          hover = {
+            dictionary.enable = true;
+            printenv.enable = true;
+          };
         };
       };
 
@@ -214,7 +219,7 @@
         autoLoad = true;
         settings = {
           auto_install = true;
-          ensure_installed = [ "c" "cpp" "lua" "python" "nix" "c_sharp" "html" "nix" "tsx" "javascript" "vim" "vimdoc" "query"]; # list languages you want
+          ensure_installed = [ "c" "cpp" "lua" "python" "nix" "c_sharp" "html" "nix" "tsx" "rust" "javascript" "vim" "vimdoc" "query"]; # list languages you want
 
           # Enable highlighting based on Tree-sitter
           highlight.enable = true;
