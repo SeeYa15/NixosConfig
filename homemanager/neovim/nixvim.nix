@@ -189,7 +189,7 @@
         sources = {
           completion = {
             nvim_snippets.enable = true;
-            luasnip.enable = true;
+            # luasnip.enable = true;
             spell.enable = true;
             tags.enable = true;
           };
