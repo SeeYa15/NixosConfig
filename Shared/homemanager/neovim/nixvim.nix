@@ -1,10 +1,10 @@
 {inputs, lib, pkgs, config, ...} : 
 {
   home.packages = with pkgs; [
-    # csharp-ls
-    # lua-language-server
-    # nixd
-    # clang-tools    # includes clangd
+     csharp-ls
+     lua-language-server
+     nixd
+     clang-tools    # includes clangd
   ];
 
   programs.direnv = {
@@ -219,7 +219,7 @@
         autoLoad = true;
         settings = {
           auto_install = true;
-          ensure_installed = [ "c" "cpp" "lua" "python" "nix" "c_sharp" "html" "nix" "tsx" "rust" "javascript" "vim" "vimdoc" "query"]; # list languages you want
+          ensure_installed = [ "c" "cpp" "lua" "python" "nix" "c_sharp" "html" "nix" "tsx" "rust" "javascript" "vim" "vimdoc" "query"]; 
 
           # Enable highlighting based on Tree-sitter
           highlight.enable = true;

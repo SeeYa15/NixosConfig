@@ -1,3 +1,4 @@
+
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
@@ -7,12 +8,9 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      ./hardware/hardware-configuration.nix
     ];
   
-  # Bootloader.
-  #boot.loader.systemd-boot.enable = true;
-  #boot.loader.efi.canTouchEfiVariables = true;
   boot = {
     loader = {
       systemd-boot.enable = true;
@@ -28,7 +26,7 @@
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
 
-  networking.hostName = "johnny-home"; # Define your hostname.
+  networking.hostName = "bojje-pc"; # Define your hostname.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -42,7 +40,6 @@
     settings = {
       auto-optimise-store = true;
       experimental-features = ["nix-command" "flakes"];
-      max-jobs = 3;
     };
   };
   # Set your time zone.
@@ -128,8 +125,6 @@
       };
       videoDrivers = [
         "displaylink"
-        #Used for intel
-        # "modesetting" 
         "amdgpu" 
         "nvidia"];
     };
@@ -137,11 +132,6 @@
     dbus.enable = true;
     seatd.enable = true;
     blueman.enable = true;
-    #Laptop specific settings
-    logind = {
-      lidSwitch = "hibernate";
-      lidSwitchExternalPower = "ignore";
-    };
     greetd = {
       enable = true;
       settings = {
@@ -178,7 +168,6 @@
     chromium
     greetd.tuigreet #Login
     usbutils 
-    webcamoid
     displaylink
   ];
   fonts.packages = with pkgs; [

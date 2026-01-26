@@ -1,8 +1,8 @@
+
 { config, pkgs, inputs, lib,  ...}:
 {
   home.username = "johnnys";
   home.homeDirectory = "/home/johnnys";
-  # home.file.".config/waybar/style.css".source = ./homemanager/waybar/chatgptstyle.css;
 
   home.packages = with pkgs; [
     zip
@@ -21,7 +21,6 @@
     tree
     kitty
     #fuzzel #Used as a program starter. Wofi is being used atm
-    asciicam
     vial #Keyboard configure
     hyprpicker
     hyprsunset
@@ -43,7 +42,6 @@
     pavucontrol
     pulseaudio
     pipewire
-    acpi #For checking battery, LID on laptop
     swayimg
     yazi
     obs-studio
@@ -56,18 +54,17 @@
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
     inputs.spicetify-nix.homeManagerModules.default
-      ./homemanager/waybar/waybar.nix
-      ./homemanager/hyprland/hyprland.nix
-      ./homemanager/lf/lf.nix
-      ./homemanager/hyprpaper/hyprpaper.nix
-      ./homemanager/tmux/tmux.nix
-      ./homemanager/neovim/nixvim.nix
-      ./homemanager/spicetify/spicetify.nix
-      ./homemanager/wofi/wofi.nix
-      ./homemanager/zsh/zsh.nix
-      ./homemanager/btop/btop.nix
-      #./homemanager/fuzzel/fuzzel.nix
-      ./homemanager/yazi/yazi.nix
+      ./waybar/waybar.nix
+      ./hyprland/hyprland.nix
+      ../Shared/homemanager/lf/lf.nix
+      ../Shared/homemanager/hyprpaper/hyprpaper.nix
+      ../Shared/homemanager/tmux/tmux.nix
+      ../Shared/homemanager/neovim/nixvim.nix
+      ../Shared/homemanager/spicetify/spicetify.nix
+      ../Shared/homemanager/wofi/wofi.nix
+      ../Shared/homemanager/zsh/zsh.nix
+      ../Shared/homemanager/btop/btop.nix
+      ../Shared/homemanager/yazi/yazi.nix
   ];
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
