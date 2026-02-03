@@ -231,10 +231,10 @@
           incremental_selection = {
             enable = true;
             keymaps = {
-              init_selection = false;
-              node_incremental = "grn";
-              node_decremental = "grm";
-              scope_incremental = "grc";
+              init_selection = "<leader>is";
+              node_incremental = "<leader>ni";
+              node_decremental = "<leader>nd";
+              scope_incremental = "<leader>si";
             };
           };
         };

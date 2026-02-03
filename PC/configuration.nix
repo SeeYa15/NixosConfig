@@ -26,7 +26,11 @@
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
 
-  networking.hostName = "bojje-pc"; # Define your hostname.
+  networking = {
+    hostName = "bojje-pc";
+    networkmanager.enable = true;
+  };
+  # networking.hostName = "bojje-pc"; # Define your hostname.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -34,7 +38,7 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
-  networking.networkmanager.enable = true;
+  # networking.networkmanager.enable = true;
   # Nix options
   nix = {
     settings = {
@@ -169,6 +173,7 @@
     greetd.tuigreet #Login
     usbutils 
     displaylink
+    vscode
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.bigblue-terminal

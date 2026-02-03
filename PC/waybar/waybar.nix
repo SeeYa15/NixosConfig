@@ -2,8 +2,8 @@
 
   home.packages = [pkgs.waybar];
 
-  home.file."./waybar/style.css".source = ./chatgptstyle.css;
-  home.file."./waybar/power_menu.xml".source = ./power_menu.xml;
+  home.file.".config/waybar/style.css".source = ./chatgptstyle.css;
+  home.file.".config/waybar/power_menu.xml".source = ./power_menu.xml;
 
   programs.waybar = {
     enable = true;
