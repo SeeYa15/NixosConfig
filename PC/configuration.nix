@@ -9,6 +9,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware/hardware-configuration.nix
+      ./work/1pass.nix
     ];
   
   boot = {
