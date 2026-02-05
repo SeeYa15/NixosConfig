@@ -10,6 +10,7 @@
     [ # Include the results of the hardware scan.
       ./hardware/hardware-configuration.nix
       ./work/1pass.nix
+      ./work/vscode.nix
       # ./work/devcontainer.nix
     ];
   
@@ -182,7 +183,7 @@
     usbutils 
     displaylink
     # vscode
-    code #vs code FHS wrapper (File Hierarchy Standard)
+    # code #vs code FHS wrapper (File Hierarchy Standard)
     # (vscode-with-extensions.override {
     #   vscode = code;  # Use the FHS version
     #   vscodeExtensions = with vscode-extensions; [
