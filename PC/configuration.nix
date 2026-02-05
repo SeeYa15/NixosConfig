@@ -164,7 +164,7 @@
   };
 
 # Optional: Add your user to the "docker" group to run docker without sudo
-users.users.<username>.extraGroups = [ "docker" ];
+users.users.johnnys.extraGroups = [ "docker" ];
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
