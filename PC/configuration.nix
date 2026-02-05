@@ -159,9 +159,13 @@
       defaultSession = "hyprland";
     };
   };
-  virtualisation.docker = {
+  virtualisation.docker = {    
     enable = true;
   };
+    virtualisation.docker.rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
