@@ -2,3 +2,4 @@
   programs.devcontainer = {
     enable = true;
   };
+}
