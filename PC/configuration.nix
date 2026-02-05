@@ -74,7 +74,7 @@
   users.users.johnnys = {
     isNormalUser = true;
     description = "Johnny Svensson";
-    extraGroups = [ "networkmanager" "wheel" "dialout" "tty" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "tty" "docker"];
     shell = pkgs.zsh;
     packages = with pkgs; [];
   };
@@ -162,9 +162,6 @@
   virtualisation.docker = {
     enable = true;
   };
-
-# Optional: Add your user to the "docker" group to run docker without sudo
-users.users.johnnys.extraGroups = [ "docker" ];
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
