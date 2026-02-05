@@ -10,6 +10,7 @@
     [ # Include the results of the hardware scan.
       ./hardware/hardware-configuration.nix
       ./work/1pass.nix
+      ./work/devcontainer.nix
     ];
   
   boot = {
@@ -175,6 +176,7 @@
     usbutils 
     displaylink
     vscode
+    azuredatastudio
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.bigblue-terminal
