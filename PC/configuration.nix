@@ -181,7 +181,15 @@
     greetd.tuigreet #Login
     usbutils 
     displaylink
-    vscode
+    # vscode
+    #code #vs code FHS wrapper (File Hierarchy Standard)
+    (vscode-with-extensions.override {
+      vscode = code;  # Use the FHS version
+      vscodeExtensions = with vscode-extensions; [
+        ms-vscode-remote.remote-containers
+        # Add other extensions
+      ];
+    })
     azuredatastudio
     devcontainer
     docker
