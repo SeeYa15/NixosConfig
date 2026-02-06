@@ -4,7 +4,7 @@
 
     profiles = {
       default = {
-        extensions = with pkgs.nix-vscode-extensions.vscode-marketplace; [
+        extensions = with pkgs.vscode-extensions.vscode-marketplace; [
           ms-dotnettools.csdevkit
           ms-dotnettools.csharp
           ms-vscode-remote.remote-containers
