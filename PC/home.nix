@@ -56,6 +56,7 @@
     inputs.spicetify-nix.homeManagerModules.default
       ./waybar/waybar.nix
       ./hyprland/hyprland.nix
+      ../Shared/homemanager/vscode/vscode.nix
       ../Shared/homemanager/lf/lf.nix
       ../Shared/homemanager/hyprpaper/hyprpaper.nix
       ../Shared/homemanager/tmux/tmux.nix
