@@ -1,5 +1,6 @@
-{pkgs, lib, config}:{
-    programs.azuredatastudio = {
-        enable = true;
-    };
-};
+{pkgs, lib, config, ...}:{
+    environment.systemPackages = with pkgs; 
+    [
+        azuredatastudio
+    ]
+}

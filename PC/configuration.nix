@@ -10,9 +10,7 @@
     [ # Include the results of the hardware scan.
       ./hardware/hardware-configuration.nix
       ./work/1pass.nix
-      ../Shared/system/vscode.nix
-      # ./work/vscode.nix
-      # ./work/devcontainer.nix
+      ../Shared/system/azuredatastudio.nix
     ];
   
   boot = {
