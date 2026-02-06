@@ -10,7 +10,8 @@
     [ # Include the results of the hardware scan.
       ./hardware/hardware-configuration.nix
       ./work/1pass.nix
-      ./work/vscode.nix
+      ../Shared/system/vscode.nix
+      # ./work/vscode.nix
       # ./work/devcontainer.nix
     ];
   
@@ -162,16 +163,15 @@
   };
   virtualisation.docker = {    
     enable = true;
-  };
-    virtualisation.docker.rootless = {
+    rootless = {
       enable = true;
       setSocketVariable = true;
     };
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
     wget
     w3m 
@@ -191,9 +191,9 @@
     #     # Add other extensions
     #   ];
     # })
-    azuredatastudio
-    devcontainer
-    docker
+    # azuredatastudio
+    # devcontainer
+    # docker
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.bigblue-terminal
