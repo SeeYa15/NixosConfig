@@ -11,7 +11,7 @@
           ms-vscode.theme-tomorrowkit
           dbaeumer.vscode-eslint
           esbenp.prettier-vscode
-          patcx.vscode-nuget-gallery
+          patch.vscode-nuget-gallery
           github.codespaces
         ];
       };
