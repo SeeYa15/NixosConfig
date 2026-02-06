@@ -190,8 +190,8 @@
     #   ];
     # })
     # azuredatastudio
-    # devcontainer
-    # docker
+    devcontainer
+    docker
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.bigblue-terminal
