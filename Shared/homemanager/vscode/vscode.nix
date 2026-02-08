@@ -6,6 +6,7 @@
       ms-dotnettools.csharp
       ms-vscode-remote.remote-containers
       ms-vscode.theme-tomorrowkit
+      pkief.material-icon-theme
       dbaeumer.vscode-eslint
       esbenp.prettier-vscode
       github.codespaces
