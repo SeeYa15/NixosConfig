@@ -3,7 +3,7 @@
     enable = true;
     profiles = {
       default = {
-        extensions = with inputs.nix-vscode-extensions.vscode-marketplace; [
+        extensions = with inputs.nix-vscode-extensions; [
           ms-dotnettools.csdevkit
           ms-dotnettools.csharp
           ms-vscode-remote.remote-containers
