@@ -1,9 +1,14 @@
-{inputs, pkgs, lib, config, ... }: {
+{inputs, pkgs, lib, config, ... }: 
+let
+  extensions = inputs.nix-vscode-extensions.extensions.${pkgs.system};
+in
+{
+  
   programs.vscode = {
     enable = true;
     profiles = {
       default = {
-        extensions = with inputs.nix-vscode-extensions; [
+        extensions = with extensions.vscode-marketplace; [
           ms-dotnettools.csdevkit
           ms-dotnettools.csharp
           ms-vscode-remote.remote-containers
