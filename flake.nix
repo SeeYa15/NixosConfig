@@ -22,6 +22,9 @@
       url = "github:Gerg-L/spicetify-nix";
       #inputs.spicetify-nix.homeManagerModules.default
     };
+    nix-vscode-extensions = {
+      url= "github:nix-community/nix-vscode-extensions";
+    }; 
   };
 
   outputs = { self, nixpkgs, home-manager, hyprland, nixvim, spicetify-nix, ... }@inputs: 
