@@ -27,7 +27,14 @@
     }; 
   };
 
-  outputs = { self, nixpkgs, home-manager, hyprland, nixvim, spicetify-nix, ... }@inputs: 
+  outputs = { self, 
+  nixpkgs, 
+  home-manager, 
+  hyprland, 
+  nixvim, 
+  spicetify-nix, 
+  nix-vscode-extensions, 
+  ... }@inputs: 
     let
       currentSystem = "x86_64-linux"; 
     in {
