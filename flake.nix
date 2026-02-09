@@ -33,7 +33,7 @@
   hyprland, 
   nixvim, 
   spicetify-nix, 
-  nix-vscode-extensions, 
+  nix-vscode-extensions,
   ... }@inputs: 
     let
       currentSystem = "x86_64-linux"; 
@@ -45,7 +45,7 @@
         johnny-laptop = nixpkgs.lib.nixosSystem {
 
           system = currentSystem;
-          specialArgs = {inherit inputs;};
+          specialArgs = {inherit inputs outputs;};
           modules = [
 
             ./Laptop/configuration.nix
@@ -60,7 +60,7 @@
         };
         bojje-pc = nixpkgs.lib.nixosSystem {
           system = currentSystem;
-          specialArgs = {inherit inputs;};
+          specialArgs = {inherit inputs outputs;};
           modules = [
 
             ./PC/configuration.nix
