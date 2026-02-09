@@ -6,7 +6,7 @@ in
   
   programs.vscode = {
     enable = true;
-    nixpkgs.config.allowUnfree = true;
+    
     profiles = {
       default = {
         extensions = with extensions.vscode-marketplace; [
