@@ -45,7 +45,7 @@
         johnny-laptop = nixpkgs.lib.nixosSystem {
 
           system = currentSystem;
-          specialArgs = {inherit inputs outputs;};
+          specialArgs = {inherit inputs;};
           modules = [
 
             ./Laptop/configuration.nix
@@ -60,7 +60,7 @@
         };
         bojje-pc = nixpkgs.lib.nixosSystem {
           system = currentSystem;
-          specialArgs = {inherit inputs outputs;};
+          specialArgs = {inherit inputs;};
           modules = [
 
             ./PC/configuration.nix
