@@ -23,9 +23,9 @@
       #        "size 800 600,class:^(Spotify)$"
       #      ];
       
-      windowrulev2 = [ 
-        "tag:yazi, class:^(kitty)$,title:Yazi"
-      ];
+      # windowrulev2 = [ 
+      #   "tag:yazi, class:^(kitty)$,title:Yazi"
+      # ];
 
       input = {
           kb_layout = "se,us";
