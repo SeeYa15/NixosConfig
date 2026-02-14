@@ -1,7 +1,6 @@
 
 { config, pkgs, inputs, lib,  ...}:{
 
-  allowUnfree = true;
   home.username = "johnnys";
   home.homeDirectory = "/home/johnnys";
 
