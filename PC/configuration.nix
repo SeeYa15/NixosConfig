@@ -150,7 +150,7 @@
 
         default_session = {
           user = "greeter";
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --cmd Hyprland"; 
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --cmd start-hyprland"; 
         };
       }; 
     };
