@@ -49,6 +49,11 @@
     obs-studio
     satty
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
+
+    dotnet-sdk_6
+    dotnet-sdk_7
+    dotnet-sdk_8
+    dotnet-sdk_9
   ];
 
 
