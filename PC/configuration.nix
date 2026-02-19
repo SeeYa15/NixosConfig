@@ -187,6 +187,7 @@
     slack
     firefox
     brave
+    microsoft-edge
     chromium
     tuigreet #Login
     usbutils 
