@@ -37,17 +37,25 @@
   ... }@inputs: 
     let
       currentSystem = "x86_64-linux"; 
+      #system = builtins.currentSystem;
+
+      pkgs = import nixpkgs {
+      system = currentSystem;
+      config.allowUnfree = true;
+      overlays = [ nix-vscode-extensions.overlays.default ];
+  };
     in {
 
       # NixosConfiguration is what set-up the profile of what flake config to use.
       # This flake would be 'sudo nixos-rebuild switch --flake /PathToThisFile/#johnny-home'
       nixosConfigurations = {
+        
         johnny-laptop = nixpkgs.lib.nixosSystem {
 
           system = currentSystem;
           specialArgs = {inherit inputs;};
           modules = [
-
+            { nixpkgs.pkgs = pkgs; } 
             ./Laptop/configuration.nix
             home-manager.nixosModules.home-manager
             {
@@ -62,7 +70,7 @@
           system = currentSystem;
           specialArgs = {inherit inputs;};
           modules = [
-
+            { nixpkgs.pkgs = pkgs; } 
             ./PC/configuration.nix
             home-manager.nixosModules.home-manager
             {

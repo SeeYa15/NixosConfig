@@ -168,7 +168,10 @@
   };
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  # nixpkgs.config = {
+  #   allowUnfree = true;
+  #   allowUnfreePredicate = true;
+  # };
 
   environment.systemPackages = with pkgs; [
     wget
@@ -177,7 +180,7 @@
     firefox
     brave
     chromium
-    greetd.tuigreet #Login
+    tuigreet #Login
     usbutils 
     displaylink
     devcontainer
