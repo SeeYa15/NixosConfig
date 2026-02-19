@@ -118,6 +118,14 @@
     localNetworkGameTransfers.openFirewall = true;
   };
 
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc
+    zlib
+    openssl
+    icu
+];
+
   programs.zsh.enable = true;
   systemd = {
     services.dlm.wantedBy = ["multi-user.target"];
@@ -189,9 +197,6 @@
       sdk_8_0
       sdk_9_0
     ])
-    icu
-    openssl
-    zlib
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.bigblue-terminal
