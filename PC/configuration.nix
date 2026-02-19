@@ -185,6 +185,10 @@
     displaylink
     devcontainer
     docker
+     (with dotnetCorePackages; combinePackages [
+      sdk_8_0
+      sdk_9_0
+    ])
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.bigblue-terminal
