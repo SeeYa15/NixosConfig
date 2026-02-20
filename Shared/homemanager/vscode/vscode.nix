@@ -1,15 +1,11 @@
-{inputs, pkgs, lib, config, ... }: 
-let
-  # extensions = inputs.nix-vscode-extensions.extensions.${pkgs.system};
-  # extensions = (import pkgs { inherit system; config.allowUnfree = true; overlays = [ nix-vscode-extensions.overlays.default ]; }).nix-vscode-extensions;
-in
-{
+{inputs, pkgs, lib, config, ... }: {
+
   
   programs.vscode = {
     enable = true;
     profiles = {
       default = {
-        extensions = with pkgs.vscode-marketplace; [
+        extensions = with pkgs.nix-vscode-extensions.vscode-marketplace; [
           ms-dotnettools.csdevkit
           ms-dotnettools.csharp
           ms-dotnettools.vscode-dotnet-runtime
