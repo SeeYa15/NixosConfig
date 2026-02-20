@@ -14,7 +14,6 @@ in
           ms-dotnettools.csharp
           ms-dotnettools.vscode-dotnet-runtime
           ms-vscode-remote.remote-containers
-          ms-vscode.theme-tomorrowkit
           dbaeumer.vscode-eslint
           esbenp.prettier-vscode
           patcx.vscode-nuget-gallery
