@@ -25,7 +25,7 @@
       ./work/1pass.nix
       ../Shared/system/azuredatastudio.nix
     ];
-  security.pki.certificateFiles = [./certs/rootCA.pem];
+  # security.pki.certificateFiles = [./certs/rootCA.pem];
   boot = {
     loader = {
       systemd-boot.enable = true;
