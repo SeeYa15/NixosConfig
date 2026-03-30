@@ -31,6 +31,7 @@
     wayclip
     discord
     swww
+    cmake
     waypaper
     #System controllers / CTL
     playerctl #Handling music, media player
