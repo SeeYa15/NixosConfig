@@ -4,6 +4,18 @@
   home.username = "johnnys";
   home.homeDirectory = "/home/johnnys";
 
+
+  # home.file."${config.xdg.dataHome}/mkcert/rootCA-key.pem" = {
+  #   force = true;
+  #   # source = "./certs/rootCA-key.pem";
+  #   source = builtins.path { path = ./certs/rootCA-key.pem; };
+  # };
+
+  # home.file."${config.xdg.dataHome}/mkcert/rootCA.pem" = {
+  #   # source = "./certs/rootCA.pem";
+  #   source = builtins.path { path = ./certs/rootCA.pem; };
+  # };
+  
   home.packages = with pkgs; [
     zip
     fastfetch
@@ -52,7 +64,7 @@
 
 
   imports = [
-    inputs.nixvim.homeManagerModules.nixvim
+    inputs.nixvim.homeModules.nixvim
     inputs.spicetify-nix.homeManagerModules.default
       ./waybar/waybar.nix
       ./hyprland/hyprland.nix
@@ -71,8 +83,12 @@
   programs.home-manager.enable = true;
   programs.git = {
     enable = true;
-    userEmail = "johnny.svensson15@gmail.com";
-    userName = "Johnny Svensson";
+    settings = {
+      user = {
+        email = "johnny.svensson15@gmail.com";
+        name = "Johnny Svensson";
+      };    
+    };        
   };
 
   home.sessionVariables = {

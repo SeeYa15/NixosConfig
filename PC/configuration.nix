@@ -4,7 +4,20 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, inputs, ... }:
-
+# let
+#   dotnetCombined = with pkgs.dotnetCorePackages; combinePackages [
+#       sdk_8_0
+#       sdk_9_0
+#       #Using version 10 generates a problem and is the only SDK that is being used if combined with other SDK
+#       #sdk_10_0
+#       aspnetcore_8_0
+#       aspnetcore_9_0
+#       #aspnetcore_10_0
+#       runtime_8_0
+#       runtime_9_0
+#       #runtime_10_0
+#     ];
+# in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -12,7 +25,7 @@
       ./work/1pass.nix
       ../Shared/system/azuredatastudio.nix
     ];
-  
+  security.pki.certificateFiles = [./certs/rootCA.pem];
   boot = {
     loader = {
       systemd-boot.enable = true;
@@ -32,15 +45,11 @@
     hostName = "bojje-pc";
     networkmanager.enable = true;
   };
-  # networking.hostName = "bojje-pc"; # Define your hostname.
-  #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Enable networking
-  # networking.networkmanager.enable = true;
   # Nix options
   nix = {
     settings = {
@@ -85,7 +94,7 @@
   '';
 
   # OpenGL
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
   };
 
@@ -142,6 +151,24 @@
         "amdgpu" 
         "nvidia"];
     };
+    mysql = {
+      enable = true;
+      package = pkgs.mariadb;
+
+      settings = {
+        mysqld = {
+          bind-address = "127.0.0.1"; # local only
+          port = 3306;
+
+          # Nice for development
+          general_log = 1;
+          general_log_file = "/var/lib/mysql/general.log";
+        };
+      };
+    };
+
+    # Not required for local-only, but safe to omit firewall rule
+    # networking.firewall.allowedTCPPorts = [ 3306 ];
     getty.autologinUser = "johnnys";
     dbus.enable = true;
     seatd.enable = true;
@@ -158,7 +185,7 @@
 
         default_session = {
           user = "greeter";
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --cmd start-hyprland"; 
+          command = "${pkgs.tuigreet}/bin/tuigreet --cmd start-hyprland"; 
         };
       }; 
     };
@@ -187,18 +214,18 @@
     slack
     firefox
     brave
-    microsoft-edge
-    chromium
+    # chromium
     tuigreet #Login
     usbutils 
     displaylink
     devcontainer
     docker
-     (with dotnetCorePackages; combinePackages [
-      sdk_8_0
-      sdk_9_0
-    ])
+    # dotnetCombined
   ];
+
+  # environment.sessionVariables = {
+  #   DOTNET_ROOT = "${dotnetCombined}/share/dotnet";
+  # };
   fonts.packages = with pkgs; [
     nerd-fonts.bigblue-terminal
     nerd-fonts.symbols-only
@@ -208,7 +235,7 @@
     font-awesome
   ];
   fonts = {
-    enableDefaultFonts = true;
+    enableDefaultPackages = true;
     fontconfig.enable = true;
   };
 

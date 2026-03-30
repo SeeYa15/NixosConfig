@@ -35,9 +35,11 @@
 
       monitor = [
         "DP-4, 1920x1080, 0x0, 1" 
-        "HDMI-A-2, 1920x1080, 1920x0, 1"];
+        "HDMI-A-2, 1920x1080, 1920x0, 1"
+      ];
       
 
+      
       #Master Layout
       master = {
         special_scale_factor = 0.5;
@@ -51,11 +53,11 @@
         inactive_opacity = 0.8;
         active_opacity = 1;
         fullscreen_opacity = 1;
-
       };
 
       dwindle = {
         pseudotile = true;
+        preserve_split = true;
       };
       #workspaces and monitor
       workspace = [ 
@@ -80,7 +82,7 @@
         "$mod CTRL, N, exec, kitty -e nvim ."
         "$mod, V, togglefloating"
         "$mod, P, pseudo"
-
+        "$mod, T, layoutmsg, togglesplit"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
@@ -95,6 +97,9 @@
         "$mod SHIFT, 4, movetoworkspace, 4"
         "$mod SHIFT, 5, movetoworkspace, 6"
         "$mod SHIFT, 5, movetoworkspace, 6"
+        
+        "$mod CTRL, Right, movecurrentworkspacetomonitor, +1"
+        "$mod CTRL, Left, movecurrentworkspacetomonitor, -1"
 
         "$mod SHIFT, Left, movewindow, l"
         "$mod SHIFT, Right, movewindow, r"

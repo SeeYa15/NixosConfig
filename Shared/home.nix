@@ -61,7 +61,8 @@
       ./lf/lf.nix
       ./hyprpaper/hyprpaper.nix
       ./tmux/tmux.nix
-      ./neovim/nixvim.nix
+      ./neovim.nix
+      # ./neovim/nixvim.nix
       ./spicetify/spicetify.nix
       ./wofi/wofi.nix
       ./zsh/zsh.nix

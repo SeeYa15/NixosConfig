@@ -7,10 +7,7 @@
      clang-tools    # includes clangd
   ];
 
-  programs.direnv = {
-    enable = true;
-    nix-direnv.enable = true;
-  };
+ 
 
   programs.nixvim = {
     enable = true;

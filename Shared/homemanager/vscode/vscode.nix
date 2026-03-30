@@ -14,6 +14,13 @@
           esbenp.prettier-vscode
           patcx.vscode-nuget-gallery
           github.codespaces
+          github.copilot
+          pkief.material-icon-theme
+          patcx.vscode-nuget-gallery
+          bbenoist.nix
+          dustypomerleau.rust-syntax
+          rust-lang.rust-analyzer
+          ms-python.python
         ];
       };
     };
