@@ -80,7 +80,7 @@
       ../Shared/homemanager/zsh/zsh.nix
       ../Shared/homemanager/btop/btop.nix
       ../Shared/homemanager/yazi/yazi.nix
-      ../Shared/homemanager/fzf.nix
+      ../Shared/homemanager/fzf/fzf.nix
   ];
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
