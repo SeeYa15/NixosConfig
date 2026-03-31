@@ -12,7 +12,6 @@
     jq
 
     #Terminal Search Fuzzy Finder
-    fzf
     fd 
 
     mtr #Terminal Network 
@@ -31,7 +30,6 @@
     wayclip
     discord
     swww
-    cmake
     waypaper
     #System controllers / CTL
     playerctl #Handling music, media player

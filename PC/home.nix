@@ -64,20 +64,23 @@
 
 
   imports = [
-    inputs.nixvim.homeModules.nixvim
+    # inputs.nixvim.homeModules.nixvim
+    # ../Shared/homemanager/neovim/nixvim.nix
+    
     inputs.spicetify-nix.homeManagerModules.default
       ./waybar/waybar.nix
       ./hyprland/hyprland.nix
+      ../Shared/homemanager/neovim/neovim.nix
       ../Shared/homemanager/vscode/vscode.nix
       ../Shared/homemanager/lf/lf.nix
       ../Shared/homemanager/hyprpaper/hyprpaper.nix
-      ../Shared/homemanager/tmux/tmux.nix
-      ../Shared/homemanager/neovim/nixvim.nix
+      ../Shared/homemanager/tmux/tmux.nix      
       ../Shared/homemanager/spicetify/spicetify.nix
       ../Shared/homemanager/wofi/wofi.nix
       ../Shared/homemanager/zsh/zsh.nix
       ../Shared/homemanager/btop/btop.nix
       ../Shared/homemanager/yazi/yazi.nix
+      ../Shared/homemanager/fzf.nix
   ];
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
@@ -98,14 +101,6 @@
 
   targets.genericLinux.enable = true;
   xdg.enable = true;
-  
-  #General programs. Enable.
-  programs = {
-    fzf= {
-      enable = true;
-      enableBashIntegration = true;
-    };
-  };
 
   fonts.fontconfig.enable = true;
   programs.kitty = {
