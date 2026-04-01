@@ -23,6 +23,7 @@
           ms-python.python
           ms-vscode.cpptools
           ms-vscode.cpptools-extension-pack
+          ms-vscode.cmake-tools
           jeff-hykin.better-cpp-syntax
         ];
       };
