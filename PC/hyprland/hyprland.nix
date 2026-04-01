@@ -61,11 +61,11 @@
       };
       #workspaces and monitor
       workspace = [ 
-        "1,name:General, monitor:DP-4, default:true"
+        "1,name:General, monitor:DP-1, default:true"
         "2,name:Media, monitor:HDMI-A-2, default:true"
-        "3,name:Work, monitor:DP-4, default:false"
-        "4,name:Extra, monitor:DP-4, default:false"
-        "5,name:Relax, monitor:DP-4, default:false"
+        "3,name:Work, monitor:DP-1, default:false"
+        "4,name:Extra, monitor:DP-1, default:false"
+        "5,name:Relax, monitor:DP-1, default:false"
       ];
 
       "$mod"="SUPER";

@@ -21,6 +21,9 @@
           dustypomerleau.rust-syntax
           rust-lang.rust-analyzer
           ms-python.python
+          ms-vscode.cpptools
+          ms-vscode.cpptools-extension-pack
+          jeff-hykin.better-cpp-syntax
         ];
       };
     };
