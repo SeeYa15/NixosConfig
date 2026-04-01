@@ -119,6 +119,11 @@
       xwayland.enable = true;
       package = inputs.hyprland.packages.${pkgs.system}.hyprland;
   };
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
+
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
