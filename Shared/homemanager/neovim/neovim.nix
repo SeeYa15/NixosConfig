@@ -8,7 +8,7 @@
   };
 
   xdg.configFile."nvim" = {
-    source = ../Shared/homemanager/neovim;
+    source = ./neovim;
     recursive = true;
   };
 }
