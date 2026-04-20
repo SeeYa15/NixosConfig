@@ -62,7 +62,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = {inherit inputs;};
-              home-manager.users.johnnys = import ./home.nix;
+              home-manager.users.johnnys = import ./Laptop/home.nix;
             }
           ];
         };
