@@ -77,8 +77,9 @@
     settings = {
       user = {
         email = "johnny.svensson15@gmail.com";
-        name = "Johnny Svensson";
-      };    
+        name = "Johnny Svensson";                  
+      };
+      pull.rebase = false;
     };        
   };
 
