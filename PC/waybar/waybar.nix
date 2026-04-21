@@ -27,10 +27,12 @@
 
         modules-right = [
           "hyprland/language"
+          "battery"
           "pulseaudio"
           "network"
           "tray"
           "custom/power"
+          
         ];
 
         "hyprland/language" = {
@@ -68,6 +70,29 @@
             suspend = "systemctl suspend";
             hibernate = "systemctl hibernate";
         };
+      };
+
+        battery = {
+          bat = "BAT0";
+          adapter = "AC";
+          full-at = 98;
+          design-capacity = false;
+          interval = 30;
+          tooltip = true;
+          tooltip-format = "{timeTo}";
+
+          format = "{capacity}%  {time}";
+          format-charging = "{capacity}%  ⚡ charging  {time}";
+          format-plugged = "{capacity}%  plugged";
+          format-full = "{capacity}%  full";
+          format-time = "{H}h {M}m";
+
+          states = {
+            critical = 15;
+            low = 30;
+            good = 60;
+            high = 100;
+          };
       };
 
 # Audio configuration

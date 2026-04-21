@@ -107,7 +107,7 @@
         variant = "nodeadkeys";
 
       };
-      videoDrivers = ["modesetting"];
+      videoDrivers = ["modesetting" "displaylink"];
     };
     getty.autologinUser = "johnnys";
     dbus.enable = true;
@@ -153,6 +153,7 @@
     greetd.tuigreet #Login
     usbutils 
     webcamoid
+    displaylink
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.bigblue-terminal

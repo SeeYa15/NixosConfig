@@ -224,7 +224,6 @@
     displaylink
     devcontainer
     docker
-    freerdp
     # dotnetCombined
   ];
 
