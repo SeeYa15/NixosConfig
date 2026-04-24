@@ -155,6 +155,7 @@
     webcamoid
     displaylink
     socat
+    claude-code
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.bigblue-terminal
