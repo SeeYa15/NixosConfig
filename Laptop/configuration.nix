@@ -154,6 +154,7 @@
     usbutils 
     webcamoid
     displaylink
+    socat
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.bigblue-terminal

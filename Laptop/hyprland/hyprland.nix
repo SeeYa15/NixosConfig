@@ -14,6 +14,7 @@
         "nm-applet --indicator"
         "blueman-applet"
         "swww-daemon"
+        "~/Nixosconfig/Laptop/hyprland/scripts/monitorswitch.sh"
       ];
 
 
@@ -34,7 +35,9 @@
       };
 
       monitor = [
-        "eDP-1, 1920x1080, 0x0, 1" 
+        "eDP-1, 1920x1080, 0x0, 1"
+        "DVI-I-2,1280x720@30,1920x0,1"
+        "DVI-I-1,1280x720@30,3200x0,1"
       ];
       
 
