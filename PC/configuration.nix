@@ -226,10 +226,10 @@
     docker
     # dotnetCombined
   ];
-
-  # environment.sessionVariables = {
-  #   DOTNET_ROOT = "${dotnetCombined}/share/dotnet";
-  # };
+  environment.sessionVariables = {
+    #DOTNET_ROOT = "${dotnetCombined}/share/dotnet";
+    LD_LIBRARY_PATH = "/run/opengl-driver/lib:$LD_LIBRARY_PATH";
+  };
   fonts.packages = with pkgs; [
     nerd-fonts.bigblue-terminal
     nerd-fonts.symbols-only
