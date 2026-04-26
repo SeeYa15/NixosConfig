@@ -84,19 +84,25 @@
     KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
   '';
 
-  programs.hyprland = {
+  programs = { 
+    hyprland = {
+        enable = true;
+        xwayland.enable = true;
+        package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    };
+    steam = {
       enable = true;
-      xwayland.enable = true;
-      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-  };
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-    localNetworkGameTransfers.openFirewall = true;
+      remotePlay.openFirewall = true;
+      dedicatedServer.openFirewall = true;
+      localNetworkGameTransfers.openFirewall = true;
+    };
+
+    direnv = {
+      enable = true;
+    };
+    zsh = {enable = true;};
   };
 
-  programs.zsh.enable = true;
   systemd = {
     services.dlm.wantedBy = ["multi-user.target"];
   };
@@ -115,8 +121,12 @@
     blueman.enable = true;
     #Laptop specific settings
     logind = {
-      lidSwitch = "hibernate";
-      lidSwitchExternalPower = "ignore";
+      settings = {
+        Login = {
+          HandleLidSwitch = "hibernate";
+          HandleLidSwitchExternalPower = "ignore";
+        };
+      };
     };
     greetd = {
       enable = true;
@@ -150,7 +160,7 @@
     firefox
     brave
     chromium
-    greetd.tuigreet #Login
+    tuigreet #Login
     usbutils 
     webcamoid
     displaylink
@@ -166,7 +176,7 @@
     font-awesome
   ];
   fonts = {
-    enableDefaultFonts = true;
+    enableDefaultPackages = true;
     fontconfig.enable = true;
   };
 
