@@ -72,6 +72,7 @@
 
       bind = [
 
+        
         "$mod, SUPER_L, exec, pkill wofi || wofi --show drun"
         "$mod, Q, exec, kitty"
         "$mod, C, killactive"
