@@ -4,23 +4,10 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, inputs, ... }:
-# let
-#   dotnetCombined = with pkgs.dotnetCorePackages; combinePackages [
-#       sdk_8_0
-#       sdk_9_0
-#       #Using version 10 generates a problem and is the only SDK that is being used if combined with other SDK
-#       #sdk_10_0
-#       aspnetcore_8_0
-#       aspnetcore_9_0
-#       #aspnetcore_10_0
-#       runtime_8_0
-#       runtime_9_0
-#       #runtime_10_0
-#     ];
-# in
+
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ 
       ./hardware/hardware-configuration.nix
       ./work/1pass.nix
       ../Shared/system/azuredatastudio.nix
@@ -44,10 +31,6 @@
     hostName = "bojje-pc";
     networkmanager.enable = true;
   };
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Nix options
   nix = {
@@ -114,32 +97,28 @@
   };
 
 
-  programs.hyprland = {
+  programs = { 
+    hyprland = {
+        enable = true;
+        xwayland.enable = true;
+        package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    };
+    steam = {
       enable = true;
-      xwayland.enable = true;
-      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-  };
-  programs.direnv = {
-    enable = true;
-    nix-direnv.enable = true;
-  };
+      remotePlay.openFirewall = true;
+      dedicatedServer.openFirewall = true;
+      localNetworkGameTransfers.openFirewall = true;
+    };
 
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-    localNetworkGameTransfers.openFirewall = true;
+    direnv = {
+      enable = true;
+    };
+    zsh = {enable = true;};
+    nix-ld = {enable = true;}
   };
+  
+  
 
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [
-    stdenv.cc.cc
-    zlib
-    openssl
-    icu
-];
-
-  programs.zsh.enable = true;
   systemd = {
     services.dlm.wantedBy = ["multi-user.target"];
   };
@@ -171,8 +150,6 @@
       };
     };
 
-    # Not required for local-only, but safe to omit firewall rule
-    # networking.firewall.allowedTCPPorts = [ 3306 ];
     getty.autologinUser = "johnnys";
     dbus.enable = true;
     seatd.enable = true;
@@ -205,12 +182,13 @@
       setSocketVariable = true;
     };
   };
-
-  # Allow unfree packages
-  # nixpkgs.config = {
-  #   allowUnfree = true;
-  #   allowUnfreePredicate = true;
-  # };
+  
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc
+    zlib
+    openssl
+    icu
+  ];
 
   environment.systemPackages = with pkgs; [
     wget
@@ -218,13 +196,12 @@
     slack
     firefox
     brave
-    # chromium
     tuigreet #Login
     usbutils 
     displaylink
     devcontainer
     docker
-    # dotnetCombined
+    github-copilot-cli
   ];
   environment.sessionVariables = {
     #DOTNET_ROOT = "${dotnetCombined}/share/dotnet";
@@ -244,24 +221,23 @@
   };
 
 
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
+  # Allow unfree packages
+  # nixpkgs.config = {
+  #   allowUnfree = true;
+  #   allowUnfreePredicate = true;
   # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-	
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
+  #   dotnetCombined = with pkgs.dotnetCorePackages; combinePackages [
+  #       sdk_8_0
+  #       sdk_9_0
+  #       #Using version 10 generates a problem and is the only SDK that is being used if combined with other SDK
+  #       #sdk_10_0
+  #       aspnetcore_8_0
+  #       aspnetcore_9_0
+  #       #aspnetcore_10_0
+  #       runtime_8_0
+  #       runtime_9_0
+  #       #runtime_10_0
+  #     ];
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

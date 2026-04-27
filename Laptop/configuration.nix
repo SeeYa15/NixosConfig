@@ -90,12 +90,6 @@
         xwayland.enable = true;
         package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     };
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true;
-      dedicatedServer.openFirewall = true;
-      localNetworkGameTransfers.openFirewall = true;
-    };
 
     direnv = {
       enable = true;
@@ -165,7 +159,6 @@
     webcamoid
     displaylink
     socat
-    claude-code
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.bigblue-terminal
