@@ -7,8 +7,8 @@
     vimAlias = true;
   };
 
-  xdg.configFile."nvim" = {
-    source = ./.;
-    recursive = true;
-  };
+  # xdg.configFile."nvim" = {
+  #   source = ./.;
+  #   recursive = true;
+  # };
 }

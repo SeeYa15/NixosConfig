@@ -55,10 +55,6 @@
         fullscreen_opacity = 1;
       };
 
-      dwindle = {
-        pseudotile = true;
-        preserve_split = true;
-      };
       #workspaces and monitor
       workspace = [ 
         "1,name:General, monitor:DP-1, default:true"
