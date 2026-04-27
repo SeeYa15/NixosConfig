@@ -54,7 +54,19 @@
         active_opacity = 1;
         fullscreen_opacity = 1;
       };
+      dwindle = {
+        force_split = 0;
+        preserve_split = true;
+        smart_split = false;
+        smart_resizing = true;
+        permanent_direction_override = false;
+        special_scale_factor = 0.8;
+        split_width_multiplier = 1.0;
+        use_active_for_splits = true;
+        default_split_ratio = 1.0;
+        split_bias = 0;
 
+      };
       #workspaces and monitor
       workspace = [ 
         "1,name:General, monitor:DP-1, default:true"

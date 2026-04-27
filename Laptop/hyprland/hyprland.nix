@@ -17,17 +17,6 @@
         "~/Nixosconfig/Laptop/hyprland/scripts/monitorswitch.sh"
       ];
 
-
-      #      windowrulev2 = [
-      #        "float,class:^(Spotify)$"
-      #        "center,class:^(Spotify)$"
-      #        "size 800 600,class:^(Spotify)$"
-      #      ];
-      
-      # windowrulev2 = [ 
-      #   "tag:yazi, class:^(kitty)$,title:Yazi"
-      # ];
-
       input = {
           kb_layout = "se,us";
           kb_variant = "nodeadkeys,";
@@ -57,10 +46,10 @@
         fullscreen_opacity = 1;
       };
 
-      dwindle = {
-        pseudotile = true;
-        preserve_split = true;
-      };
+      # dwindle = {
+      #   pseudotile = true;
+      #   preserve_split = true;
+      # };
       #workspaces and monitor
       workspace = [ 
         "1,name:General, monitor:eDP-1, default:true"
