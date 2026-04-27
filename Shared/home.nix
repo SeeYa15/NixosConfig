@@ -53,7 +53,7 @@
 
 
   imports = [
-    inputs.nixvim.homeManagerModules.nixvim
+    #inputs.nixvim.homeManagerModules.nixvim
     inputs.spicetify-nix.homeManagerModules.default
       ./waybar/waybar.nix
       ./hyprland/hyprland.nix
