@@ -24,7 +24,8 @@
       codes = "cd ~/Scripts/python/";
       deleteprofiles = "sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +5;";
       garbage-collect = "nixos-collect-garbage";
-      nlua = "nvim ~/.config/lua/init.lua";
+      nlua = "nvim ~/.config/nvim/init.lua";
+      plua = "nvim ~/.config/nvim/lua/plugins/";
     };
   };
 }
