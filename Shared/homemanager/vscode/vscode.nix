@@ -6,8 +6,8 @@
     profiles = {
       default = {
         extensions = with pkgs.nix-vscode-extensions.vscode-marketplace; [
-          ms-dotnettools.csdevkit
-          ms-dotnettools.csharp
+        #  ms-dotnettools.csdevkit
+        #  ms-dotnettools.csharp
           ms-dotnettools.vscode-dotnet-runtime
           ms-vscode-remote.remote-containers
           dbaeumer.vscode-eslint

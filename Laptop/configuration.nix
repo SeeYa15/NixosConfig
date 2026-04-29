@@ -94,7 +94,10 @@
     direnv = {
       enable = true;
     };
-    zsh = {enable = true;};
+    zsh = {
+      enable = true;
+    };
+    ssh.startAgent = true;
   };
 
   systemd = {
