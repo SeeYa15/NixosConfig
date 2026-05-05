@@ -52,8 +52,6 @@
 
 
   imports = [
-    # inputs.nixvim.homeModules.nixvim
-    # ../Shared/homemanager/neovim/nixvim.nix
     
     inputs.spicetify-nix.homeManagerModules.default
       ./waybar/waybar.nix
@@ -66,7 +64,6 @@
       ../Shared/homemanager/spicetify/spicetify.nix
       ../Shared/homemanager/wofi/wofi.nix
       ../Shared/homemanager/zsh/zsh.nix
-      ../Shared/homemanager/btop/btop.nix
       ../Shared/homemanager/yazi/yazi.nix
       ../Shared/homemanager/fzf/fzf.nix
   ];
@@ -101,5 +98,14 @@
     settings = {
       enable_audio_bell = false;
     };
+  };
+
+    xdg.desktopEntries.btop = {
+    name = "btop";
+    comment = "Resource monitor";
+    exec = "kitty -e btop"; 
+    icon = "btop";
+    terminal = false;
+    categories = [ "System" "Monitor" ];
   };
 }

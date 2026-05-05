@@ -5,8 +5,6 @@
 { config, pkgs, inputs, ... }:
 
 {
- 
-
 
   imports =
     [ # Include the results of the hardware scan.
@@ -15,16 +13,10 @@
       ../Shared/system/azuredatastudio.nix
     ];
   # Bootloader.
-  #boot.loader.systemd-boot.enable = true;
-  #boot.loader.efi.canTouchEfiVariables = true;
   boot = {
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
-    };
-    extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 config.boot.kernelPackages.evdi ];
-    initrd = {
-      kernelModules = ["evdi"];
     };
   };
 
@@ -32,14 +24,8 @@
   hardware.bluetooth.powerOnBoot = true;
 
   networking.hostName = "johnny-laptop"; # Define your hostname.
-  #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
   networking.networkmanager.enable = true;
+  
   # Nix options
   nix = {
     settings = {
@@ -74,7 +60,7 @@
   users.users.johnnys = {
     isNormalUser = true;
     description = "Johnny Svensson";
-    extraGroups = [ "networkmanager" "wheel" "dialout" "tty" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "tty" "video" "render" ];
     shell = pkgs.zsh;
     packages = with pkgs; [];
   };
@@ -83,6 +69,13 @@
     SUBSYSTEM=="usb", ATTR{idVendor}=="feed", ATTR{idProduct}=="0000", MODE="0666"
     KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
   '';
+
+  security.wrappers.btop = {
+  owner = "root";
+  group = "root";
+  source = "${pkgs.btop}/bin/btop";
+  capabilities = "cap_perfmon+ep";
+};
 
   programs = { 
     hyprland = {
@@ -116,6 +109,7 @@
     dbus.enable = true;
     seatd.enable = true;
     blueman.enable = true;
+
     #Laptop specific settings
     logind = {
       settings = {
@@ -125,16 +119,16 @@
         };
       };
     };
+
+    ## Initial_session as an autologin tool. It starts first. Then default session will start
+    ## https://man.sr.ht/~kennylevinsen/greetd/#setting-up-auto-login
+    #       	  initial_session = {
+    #       		  command = "Hyprland";
+    #       		  user = "johnnys";
+    #       	  };
     greetd = {
       enable = true;
       settings = {
-        ## Initial_session as an autologin tool. It starts first. Then default session will start
-        ## https://man.sr.ht/~kennylevinsen/greetd/#setting-up-auto-login
-        #       	  initial_session = {
-        #       		  command = "Hyprland";
-        #       		  user = "johnnys";
-        #       	  };
-
         default_session = {
           user = "greeter";
           command = "${pkgs.tuigreet}/bin/tuigreet --cmd start-hyprland"; 
@@ -147,9 +141,6 @@
     };
   };
 
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
     wget
     w3m 
@@ -175,25 +166,6 @@
     enableDefaultPackages = true;
     fontconfig.enable = true;
   };
-
-
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-	
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

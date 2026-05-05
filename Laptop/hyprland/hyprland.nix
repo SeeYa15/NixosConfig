@@ -25,11 +25,22 @@
 
       monitor = [
         "eDP-1, 1920x1080, 0x0, 1"
-        "DVI-I-2,1280x720@30,1920x0,1"
-        "DVI-I-1,1280x720@30,3200x0,1"
+        "DVI-I-2,1920x1080,1920x0,1"
+        # "DVI-I-2,1920x720@30,1920x0,1"     
       ];
       
-
+      dwindle = {
+        force_split = 0;
+        preserve_split = true;
+        smart_split = false;
+        smart_resizing = true;
+        permanent_direction_override = false;
+        special_scale_factor = 0.8;
+        split_width_multiplier = 1.0;
+        use_active_for_splits = true;
+        default_split_ratio = 1.0;
+        split_bias = 0;
+      };
       
       #Master Layout
       master = {
@@ -46,10 +57,6 @@
         fullscreen_opacity = 1;
       };
 
-      # dwindle = {
-      #   pseudotile = true;
-      #   preserve_split = true;
-      # };
       #workspaces and monitor
       workspace = [ 
         "1,name:General, monitor:eDP-1, default:true"
