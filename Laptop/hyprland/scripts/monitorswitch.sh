@@ -4,8 +4,9 @@ SOCKET="$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock"
 
 set_30hz() {
   sleep 2
-  hyprctl keyword monitor "DVI-I-1,1280x720@30,1920x0,1"
-  hyprctl keyword monitor "DVI-I-2,1280x720@30,4480x0,1"
+  
+  hyprctl keyword monitor "DVI-I-2,1920x1080,1920x0,1"
+  # hyprctl keyword monitor "DVI-I-2,1920x720@30,4480x0,1"
 }
 
 # Apply on startup if already connected

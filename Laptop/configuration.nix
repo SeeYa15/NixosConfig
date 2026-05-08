@@ -90,6 +90,19 @@
     zsh = {
       enable = true;
     };
+    nix-ld = {
+      enable = true;
+
+      libraries = with pkgs; [
+        stdenv.cc.cc.lib
+        icu
+        openssl
+        zlib
+        libkrb5   # Kerberos - often needed by .NET networking
+        curl
+      ];
+    };
+
     ssh.startAgent = true;
   };
 
