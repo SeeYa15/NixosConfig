@@ -13,11 +13,16 @@
     };
     hyprland.url = "github:hyprwm/Hyprland";
 
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      #When using packages from nixpkgs it caused error with plugins.
-      #inputs.nixpkgs.follows = "nixpkgs";
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # nixvim = {
+    #   url = "github:nix-community/nixvim";
+    #   #When using packages from nixpkgs it caused error with plugins.
+    #   #inputs.nixpkgs.follows = "nixpkgs";
+    # };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       #inputs.spicetify-nix.homeManagerModules.default

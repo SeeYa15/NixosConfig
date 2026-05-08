@@ -166,6 +166,7 @@
     webcamoid
     displaylink
     socat
+    zed
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.bigblue-terminal
