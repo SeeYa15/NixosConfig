@@ -16,17 +16,6 @@
         "swww-daemon"
       ];
 
-
-      #      windowrulev2 = [
-      #        "float,class:^(Spotify)$"
-      #        "center,class:^(Spotify)$"
-      #        "size 800 600,class:^(Spotify)$"
-      #      ];
-      
-      # windowrulev2 = [ 
-      #   "tag:yazi, class:^(kitty)$,title:Yazi"
-      # ];
-
       input = {
           kb_layout = "se,us";
           kb_variant = "nodeadkeys,";
@@ -34,8 +23,7 @@
       };
 
       monitor = [
-        "DP-4, 1920x1080, 0x0, 1" 
-        "HDMI-A-2, 1920x1080, 1920x0, 1"
+        "DP-1, 2560x1440@59.95Hz, 0x0, 1" 
       ];
       
 
@@ -70,7 +58,7 @@
       #workspaces and monitor
       workspace = [ 
         "1,name:General, monitor:DP-1, default:true"
-        "2,name:Media, monitor:HDMI-A-2, default:true"
+        "2,name:Media, monitor:DP-1, default:true"
         "3,name:Work, monitor:DP-1, default:false"
         "4,name:Extra, monitor:DP-1, default:false"
         "5,name:Relax, monitor:DP-1, default:false"

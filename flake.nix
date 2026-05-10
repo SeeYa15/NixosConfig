@@ -50,9 +50,6 @@
       overlays = [ nix-vscode-extensions.overlays.default ];
   };
     in {
-
-      # NixosConfiguration is what set-up the profile of what flake config to use.
-      # This flake would be 'sudo nixos-rebuild switch --flake /PathToThisFile/#johnny-home'
       nixosConfigurations = {
         
         johnny-laptop = nixpkgs.lib.nixosSystem {

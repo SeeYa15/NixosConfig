@@ -29,7 +29,7 @@
     swaynotificationcenter
     wayclip
     discord
-    swww
+    awww
     waypaper
     #System controllers / CTL
     playerctl #Handling music, media player
@@ -52,8 +52,6 @@
 
 
   imports = [
-    # inputs.nixvim.homeModules.nixvim
-    # ../Shared/homemanager/neovim/nixvim.nix
     
     inputs.spicetify-nix.homeManagerModules.default
       ./waybar/waybar.nix
