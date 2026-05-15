@@ -78,6 +78,10 @@
   # OpenGL
   hardware.graphics = {
     enable = true;
+    enable32Bit = true;  # critical for Wine/DXVK
+    extraPackages = with pkgs; [
+      rocmPackages.clr.icd
+    ];
   };
 
   # AMD (display owner)
@@ -203,7 +207,25 @@
     devcontainer
     docker
     github-copilot-cli
-    (bottles.override {
+    # (bottles.override {
+    #   # Intercept buildFHSEnv to modify target packages
+    #   buildFHSEnv = args: pkgs.buildFHSEnv (args // {
+    #     multiPkgs = envPkgs:
+    #       let
+    #         # Fetch original package list
+    #         originalPkgs = args.multiPkgs envPkgs;
+
+    #         # Disable tests for openldap
+    #         customLdap = envPkgs.openldap.overrideAttrs (_: { doCheck = false; });
+    #       in
+    #       # Replace broken openldap with the custom one
+    #       builtins.filter (p: (p.pname or "") != "openldap") originalPkgs ++ [ customLdap ];
+    #   });
+    # })
+    # wine
+    eww
+    swayidle
+     (lutris.override {
       # Intercept buildFHSEnv to modify target packages
       buildFHSEnv = args: pkgs.buildFHSEnv (args // {
         multiPkgs = envPkgs:
@@ -218,12 +240,6 @@
           builtins.filter (p: (p.pname or "") != "openldap") originalPkgs ++ [ customLdap ];
       });
     })
-    wine
-    eww
-    swayidle
-    vkd3d
-    vkdt
-    dxvk
   ];
 
   
