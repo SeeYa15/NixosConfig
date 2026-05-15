@@ -220,6 +220,10 @@
     })
     wine
     eww
+    swayidle
+    vkd3d
+    vkdt
+    dxvk
   ];
 
   
