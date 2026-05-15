@@ -203,6 +203,8 @@
     devcontainer
     docker
     github-copilot-cli
+    bottles
+    wine
   ];
   environment.sessionVariables = {
     #DOTNET_ROOT = "${dotnetCombined}/share/dotnet";

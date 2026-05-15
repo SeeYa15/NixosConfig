@@ -13,6 +13,9 @@
     };
     hyprland.url = "github:hyprwm/Hyprland";
 
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    inputs.import-tree.url = "github:vic/import-tree";
+
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
