@@ -66,7 +66,7 @@
       ../Shared/homemanager/zsh/zsh.nix
       ../Shared/homemanager/yazi/yazi.nix
       ../Shared/homemanager/fzf/fzf.nix
-      ../Shared/system/zenbrowser.nix
+      #../Shared/system/zenbrowser.nix
   ];
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;

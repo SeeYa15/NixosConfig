@@ -8,6 +8,7 @@
         extensions = with pkgs.nix-vscode-extensions.vscode-marketplace; [
         #  ms-dotnettools.csdevkit
         #  ms-dotnettools.csharp
+          mkhl.direnv
           ms-dotnettools.vscode-dotnet-runtime
           ms-vscode-remote.remote-containers
           dbaeumer.vscode-eslint
@@ -17,7 +18,8 @@
           github.copilot
           pkief.material-icon-theme
           patcx.vscode-nuget-gallery
-          bbenoist.nix
+          # bbenoist.nix
+          jnoortheen.nix-ide
           dustypomerleau.rust-syntax
           rust-lang.rust-analyzer
           ms-python.python
